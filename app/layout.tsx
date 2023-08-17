@@ -1,7 +1,18 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
  
 export const metadata: Metadata = {
   title: 'Typical Arcade',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+  },
+  viewport: {
+    initialScale: 1,
+    userScalable: false,
+    width: 'device-width',
+    maximumScale: 1,
+  },
 };
 
 export default function RootLayout({
