@@ -1,0 +1,21 @@
+<svg width="313" height="189" viewBox="0 0 313 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="156.5" cy="124" rx="156.5" ry="65" fill="black" />
+  <ellipse cx="156.5" cy="120" rx="120.5" ry="52" fill="#181A19" />
+  <ellipse cx="156.5" cy="117" rx="47.5" ry="20" fill="black" />
+  <path d="M31.5 115.75L15 122.25L30 132.25" stroke="white" stroke-width="3" stroke-linecap="round"
+    stroke-linejoin="round" />
+  <path d="M281.5 115.75L298 122.25L283 132.25" stroke="white" stroke-width="3" stroke-linecap="round"
+    stroke-linejoin="round" />
+  <path d="M130 61H183V110C183 118.837 175.837 126 167 126H146C137.163 126 130 118.837 130 110V61Z" fill="#121516" />
+  <path d="M171 61H180V114C180 118.971 175.971 123 171 123V61Z" fill="white" />
+  <path opacity="0.3" d="M142 61H133V114C133 118.971 137.029 123 142 123V61Z" fill="white" />
+  <path
+    d="M125 31C125 13.8792 138.879 0 156 0H158C175.121 0 189 13.8792 189 31V73C189 84.0457 180.046 93 169 93H145C133.954 93 125 84.0457 125 73V31Z"
+    fill="black" />
+  <path
+    d="M130 33C130 18.0883 142.088 6 157 6C171.912 6 184 18.0883 184 33V75C184 84.3888 176.389 92 167 92H147C137.611 92 130 84.3888 130 75V33Z"
+    fill="white" />
+  <path
+    d="M130 31.5C130 17.969 140.969 7 154.5 7C168.031 7 179 17.969 179 31.5V85C179 88.866 175.866 92 172 92H145C136.716 92 130 85.2843 130 77V31.5Z"
+    fill="black" />
+</svg>

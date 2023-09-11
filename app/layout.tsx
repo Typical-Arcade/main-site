@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
- 
+import './global.css';
+
 export const metadata: Metadata = {
   title: 'Typical Arcade',
   appleWebApp: {
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="overflow-scroll">{children}</body>
     </html>
   );
 }
