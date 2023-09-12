@@ -5,7 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        ['archivo-black']: ['var(--font-archivo-black)'],
+        ['archivo-regular']: ['var(--font-archivo-regular)']
+      }
+    },
   },
   plugins: [],
 }

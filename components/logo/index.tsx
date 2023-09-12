@@ -14,10 +14,10 @@ export const Logo = ({ className }: Props): JSX.Element => {
           src="/assets/logo.svg"
         />
         <div className="relative flex flex-col items-center">
-          <div className="relative w-fit whitespace-nowrap text-[75px] font-normal leading-[normal] tracking-[0] text-black [font-family:'Archivo_Black-Regular',_Helvetica]">
+          <div className="font-archivo-black relative w-fit whitespace-nowrap text-[75px] font-normal leading-[normal] tracking-[0] text-black">
             TYPICAL ARCADE
           </div>
-          <div className="relative w-fit whitespace-nowrap text-[24.4px] font-normal leading-[normal] tracking-[0] text-black [font-family:'Archivo-Regular',_Helvetica]">
+          <div className="font-archivo-regular relative w-fit whitespace-nowrap text-[24.4px] font-normal leading-[normal] tracking-[0] text-black">
             BY POWEROFTHENUT &amp; BIRDDOG9000
           </div>
         </div>

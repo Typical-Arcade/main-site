@@ -4,20 +4,20 @@ export const SectionOne = (): JSX.Element => {
   return (
     <div className="relative flex w-[1516px] items-center justify-center gap-[180px] px-0 py-[80px]">
       <div className="relative inline-flex flex-[0_0_auto] flex-col items-start gap-[16px]">
-        <div className="relative mt-[-1.00px] w-[553px] text-[56px] font-normal leading-[normal] tracking-[0] text-white [font-family:'Archivo_Black-Regular',_Helvetica]">
+        <div className="font-archivo-black relative mt-[-1.00px] w-[553px] text-[56px] font-normal leading-[normal] tracking-[0] text-white">
           WHO DONE IT?
         </div>
-        <p className="relative w-[553px] text-[28px] font-normal leading-[normal] tracking-[0] text-white [font-family:'Archivo-Regular',_Helvetica]">
-          <span className="text-[28px] font-normal tracking-[0] text-white [font-family:'Archivo-Regular',_Helvetica]">
-            Typical Arcade was started by {' '}
+        <p className="font-archivo-regular relative w-[553px] text-[28px] font-normal leading-[normal] tracking-[0] text-white">
+          <span className="font-archivo-regular text-[28px] font-normal tracking-[0] text-white">
+            Typical Arcade was started by{' '}
           </span>
           <span className="underline">@poweofthenut</span>
-          <span className="text-[28px] font-normal tracking-[0] text-white [font-family:'Archivo-Regular',_Helvetica]">
+          <span className="font-archivo-regular text-[28px] font-normal tracking-[0] text-white">
             {' '}
             and{' '}
           </span>
           <span className="underline">@birddog9000</span>
-          <span className="text-[28px] font-normal tracking-[0] text-white [font-family:'Archivo-Regular',_Helvetica]">
+          <span className="font-archivo-regular text-[28px] font-normal tracking-[0] text-white">
             {' '}
             out of the idea of creating games for the Typical Friends ecosystem.
             We love the community and want to be typical community members who

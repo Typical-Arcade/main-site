@@ -47,7 +47,7 @@ export const TopButton = ({
             state.state === 'hover' ? 'bg-[#444444]' : 'bg-[#1c1e1c]'
           }`}
         />
-        <div className="absolute left-[44px] top-[4px] whitespace-nowrap text-[24.4px] font-normal leading-[normal] tracking-[0] text-white [font-family:'Archivo_Black-Regular',_Helvetica]">
+        <div className="absolute left-[44px] top-[1px] whitespace-nowrap text-[24.4px] leading-[normal] tracking-[0] text-white font-archivo-black">
           {text}
         </div>
       </div>

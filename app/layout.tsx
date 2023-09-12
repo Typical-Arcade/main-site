@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Archivo_Black, Archivo } from 'next/font/google';
 import './global.css';
 
 export const metadata: Metadata = {
@@ -15,13 +16,27 @@ export const metadata: Metadata = {
   },
 };
 
+const archivoBlack = Archivo_Black({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-archivo-black',
+});
+
+const archivo = Archivo({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-archivo-regular',
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${archivoBlack.variable}`}>
       <body className="overflow-scroll">{children}</body>
     </html>
   );

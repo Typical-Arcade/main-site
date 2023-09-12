@@ -1,3 +1,4 @@
+import { ConnectButton } from '../components/arcade/connectButton';
 import { Joystick } from '../components/arcade/joystick';
 import { TopButton } from '../components/arcade/topButton';
 import {
@@ -74,29 +75,28 @@ export default function Page() {
                   </div>
                 </div>
                 <div className="absolute left-[33px] top-[1274px] h-[959px] w-[1462px] bg-[url(/assets/arcadeBottom.svg)] bg-center">
-                  <div className="relative left-[1000px] top-[300px] w-fit">
-                    <object
-                      type="image/svg+xml"
-                      data="/assets/connectButton.svg"
-                    />
-                  </div>
-                  <div className="relative left-[160px] h-[177px] w-fit">
-                    <Joystick
-                      className="relative bottom-[100px] h-fit w-fit"
-                      state="idle"
-                    />
-                    <div className="relative bottom-[200px] left-[850px] flex flex-row gap-x-5">
-                      <TopButton
-                        className="h-[4.9rem] w-[9.4rem]"
-                        stateProp="idle"
-                        text="A"
+                  <div className="relative left-[100px] h-[177px] w-full">
+                    <div className='flex flex-row items-center gap-x-[40rem]'>
+                      <Joystick
+                        className="h-fit w-fit"
+                        state="idle"
                       />
-                      <TopButton
-                        className="h-[4.9rem] w-[9.4rem]"
-                        stateProp="idle"
-                        text="B"
-                      />
+                      <div className="flex flex-row relative top-5 gap-x-5">
+                        <TopButton
+                          className="h-[4.9rem] w-[9.4rem]"
+                          stateProp="idle"
+                          text="A"
+                        />
+                        <TopButton
+                          className="h-[4.9rem] w-[9.4rem]"
+                          stateProp="idle"
+                          text="B"
+                        />
+                      </div>
                     </div>
+                  </div>
+                  <div className="relative left-[1030px] top-[100px] w-fit">
+                    <ConnectButton />
                   </div>
                 </div>
               </div>
