@@ -6,7 +6,7 @@ import {
   Footer,
 } from '../components/landing';
 import { Background } from '../components/landing/background';
-
+ 
 export default function Page() {
   return (
     <div className="h-[250rem] w-full bg-gradient-to-b from-[#353535] to-[#090c0f]">

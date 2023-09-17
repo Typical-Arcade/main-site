@@ -42,10 +42,10 @@ export const Arcade = (): JSX.Element => {
         </div>
       </div>
       <div className="absolute left-[33px] top-[1274px] h-[959px] w-[1462px] bg-[url(/assets/arcadeBottom.svg)] bg-center">
-        <div className="relative left-[100px] h-[177px] w-full">
-          <div className="flex flex-row items-center gap-x-[40rem]">
-            <Joystick className="h-fit w-fit" state="idle" />
-            <div className="relative top-5 flex flex-row gap-x-5">
+        <div className="relative left-0 top-7 h-[180px] w-full">
+          <div className="relative bottom-10 left-[6rem] flex h-[180px] w-full flex-row items-center gap-x-[40rem]">
+            <Joystick className="" state="idle" />
+            <div className="relative top-6 flex flex-row gap-x-5">
               <TopButton
                 className="h-[4.9rem] w-[9.4rem]"
                 stateProp="idle"
@@ -59,7 +59,7 @@ export const Arcade = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div className="relative left-[1030px] top-[100px] w-fit">
+        <div className="relative left-[1060px] top-[100px] w-fit">
           <ConnectButton />
         </div>
       </div>
