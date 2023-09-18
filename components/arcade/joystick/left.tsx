@@ -1,18 +1,20 @@
 import { JSX } from 'react';
 
-export const IdleJoystick = (): JSX.Element => {
+export const LeftJoystick = (): JSX.Element => {
   return (
     <div className="flex h-[200px] w-[300px] flex-col content-start items-center">
       <div className="z-10">
         <div className="h-[64px] w-[60px]">
-          <div className="relative h-[64px]">
-            <div className="absolute left-[5px] top-[61px] h-[65px] w-[53px] rounded-[0px_0px_13px_0px] bg-[#121516]">
-              <div className="absolute left-[41px] top-0 h-[62px] w-[9px] rounded-[0px_0px_13px_0px] bg-white" />
-              <div className="absolute left-[3px] top-0 h-[62px] w-[9px] rotate-180 rounded-[0px_0px_13px_0px] bg-white opacity-30" />
-            </div>
-            <div className="absolute left-0 top-0 h-[80px] w-[60px] rounded-[31px_31px_17px_17px] bg-black">
-              <div className="relative left-[3px] top-[4px] h-[86px] w-[54px] rounded-[31px_31px_17px_17px] bg-white">
-                <div className="relative top-px h-[85px] w-[49px] rounded-[31px_31px_7px_15px] bg-black" />
+          <div className="rotate-[-17.50deg]">
+            <div className="relative right-6 h-[64px]">
+              <div className="absolute left-[5px] top-[61px] h-[65px] w-[53px] rounded-[0px_0px_13px_0px] bg-[#121516]">
+                <div className="absolute left-[41px] top-0 h-[62px] w-[9px] rounded-[0px_0px_13px_0px] bg-white" />
+                <div className="absolute left-[3px] top-0 h-[62px] w-[9px] rotate-180 rounded-[0px_0px_13px_0px] bg-white opacity-30" />
+              </div>
+              <div className="absolute left-0 top-0 h-[80px] w-[60px] rounded-[31px_31px_17px_17px] bg-black">
+                <div className="relative left-[3px] top-[4px] h-[86px] w-[54px] rounded-[31px_31px_17px_17px] bg-white">
+                  <div className="relative top-px h-[85px] w-[49px] rounded-[31px_31px_7px_15px] bg-black" />
+                </div>
               </div>
             </div>
           </div>

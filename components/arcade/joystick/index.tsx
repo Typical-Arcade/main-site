@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { JSX } from 'react';
 import { IdleJoystick } from './idle';
+import { RightJoystick } from './right';
+import { LeftJoystick } from './left';
 
 interface Props {
   state: 'click-left' | 'click-right' | 'idle';
@@ -10,13 +12,9 @@ interface Props {
 export const Joystick = ({ state, className }: Props): JSX.Element => {
   return (
     <div className={className}>
-      {['idle'].includes(state) && <IdleJoystick />}
-      {['click-left'].includes(state) && (
-        <object type="image/svg+xml" data="/assets/joystickLeft.svg" />
-      )}
-      {['click-right'].includes(state) && (
-        <object type="image/svg+xml" data="/assets/joystickRight.svg" />
-      )}
+      {state === 'idle' && <IdleJoystick />}
+      {state === 'click-left' && <LeftJoystick />}
+      {state === 'click-right' && <RightJoystick />}
     </div>
   );
 };
