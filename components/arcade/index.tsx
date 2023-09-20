@@ -44,7 +44,7 @@ export const Arcade = (): JSX.Element => {
       <div className="absolute left-[33px] top-[1274px] h-[959px] w-[1462px] bg-[url(/assets/arcadeBottom.svg)] bg-center">
         <div className="relative left-0 top-7 h-[180px] w-full">
           <div className="relative bottom-10 left-[6rem] flex h-[180px] w-full flex-row items-center gap-x-[40rem]">
-            <Joystick className="" state="idle" />
+            <Joystick />
             <div className="relative top-6 flex flex-row gap-x-5">
               <TopButton
                 className="h-[4.9rem] w-[9.4rem]"

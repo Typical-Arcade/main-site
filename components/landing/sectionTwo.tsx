@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { JSX } from 'react';
 
 export const SectionTwo = (): JSX.Element => {
@@ -15,9 +16,9 @@ export const SectionTwo = (): JSX.Element => {
             Soon....There is only two of us right now so games will come as soon
             as we get to them. Stay up to date with announcements by following{' '}
           </span>
-          <a href="https://twitter.com/typicalarcade">
+          <Link href="https://twitter.com/typicalarcade">
             <span className="underline">@typicalaracde</span>
-          </a>
+          </Link>
           <span className="font-archivo-regular text-[28px] font-normal tracking-[0] text-white">
             {' '}
             on twitter

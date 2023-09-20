@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { JSX } from 'react';
 
 export const Footer = (): JSX.Element => {
@@ -10,13 +11,13 @@ export const Footer = (): JSX.Element => {
             <div className="whitespace-nowrap font-archivo-black text-[28px] font-normal leading-[24.4px] tracking-[0] text-white">
               © 2023 TYPICAL ARCADE
             </div>
-            <a href="https://twitter.com/typicalarcade">
+            <Link href="https://twitter.com/typicalarcade">
               <img
                 className="h-[40px] w-[40px]"
                 alt="XLogo"
                 src="/assets/landing/x-logo.svg"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

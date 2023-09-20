@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { JSX } from 'react';
 
 export const SectionThree = (): JSX.Element => {
@@ -8,9 +9,9 @@ export const SectionThree = (): JSX.Element => {
           TYPICAL FRIENDS
         </div>
         <p className="relative w-[553px] font-archivo-regular text-[28px] font-normal leading-[normal] tracking-[0] text-white">
-          <a href="https://twitter.com/_typicalfriends">
+          <Link href="https://twitter.com/_typicalfriends">
             <span className="underline">@_typicalfriends</span>
-          </a>
+          </Link>
           <span className="font-archivo-regular text-[28px] font-normal tracking-[0] text-white">
             {' '}
             is a-typical web3 studio creating top-tier generative art &amp;

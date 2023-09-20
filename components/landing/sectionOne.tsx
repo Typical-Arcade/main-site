@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { JSX } from 'react';
 
 export const SectionOne = (): JSX.Element => {
@@ -11,16 +12,16 @@ export const SectionOne = (): JSX.Element => {
           <span className="font-archivo-regular text-[28px] font-normal tracking-[0] text-white">
             Typical Arcade was started by{' '}
           </span>
-          <a href="https://twitter.com/powerofthenut">
+          <Link href="https://twitter.com/powerofthenut">
             <span className="underline">@poweofthenut</span>
-          </a>
+          </Link>
           <span className="font-archivo-regular text-[28px] font-normal tracking-[0] text-white">
             {' '}
             and{' '}
           </span>
-          <a href="https://twitter.com/birddog9000">
+          <Link href="https://twitter.com/birddog9000">
             <span className="underline">@birddog9000</span>
-          </a>
+          </Link>
           <span className="font-archivo-regular text-[28px] font-normal tracking-[0] text-white">
             {' '}
             out of the idea of creating games for the Typical Friends ecosystem.
