@@ -9,7 +9,7 @@ import { Background } from '../components/landing/background';
  
 export default function Page() {
   return (
-    <div className="h-[250rem] w-full bg-gradient-to-b from-[#353535] to-[#090c0f]">
+    <div className="w-full bg-gradient-to-b from-[#353535] to-[#090c0f]">
       <div className="relative h-full w-full overflow-hidden">
         <div className="flex flex-col items-center">
           <Background />
