@@ -13,10 +13,8 @@ export default function Page() {
       <div className="relative h-full w-full overflow-hidden">
         <div className="flex flex-col items-center">
           <Background />
-          <div className="absolute left-0 top-[24px] flex w-screen items-start justify-center gap-[10px] px-0 py-[50px]">
-            <div className="relative w-1/2">
-              <Arcade />
-            </div>
+          <div className="absolute top-[12px] md:top-[24px] flex w-screen items-start justify-center gap-[10px] px-[10px] md:px-0 py-[50px]">
+            <Arcade />
           </div>
           <SectionOne />
           <SectionTwo />

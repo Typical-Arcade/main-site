@@ -7,59 +7,29 @@ import { TopButton } from './topButton';
 
 export const Arcade = (): JSX.Element => {
   return (
-    <div className="relative -top-px left-[-3px] h-[2236px] w-[1521px] bg-[url(/assets/arcadeBase.svg)] bg-center">
-      <div className="relative left-[108px] top-px h-[432px] w-[1314px] bg-[url(/assets/arcadeTop.svg)] bg-center">
-        <Logo className="relative top-[6rem] flex content-center justify-center" />
-      </div>
-      <div className="relative left-[11.5rem] h-fit w-fit">
-        <svg
-          width="1152"
-          height="784"
-          viewBox="0 0 1152 784"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3.62256 780.764L25.1739 3.04001L1128.04 6.78808L1148.19 780.764H3.62256Z"
-            stroke="black"
-            strokeWidth="5.6221"
-            strokeLinecap="round"
-          />
-        </svg>
-        <div className="absolute left-8 top-8 h-fit w-fit">
-          <svg
-            width="1088"
-            height="719"
-            viewBox="0 0 1088 719"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.372559 718.591L20.0499 0.367096H1066.23L1087.78 718.591H0.372559Z"
-              fill="black"
-            />
-          </svg>
+    <div className="flex h-screen w-screen flex-col items-center">
+      <img
+        className="absolute z-0"
+        src="/assets/arcade.svg"
+        alt="arcade-base"
+      />
+      <div className="z-10 flex h-screen basis-1/6 flex-col items-center">
+        <Logo className="relative top-[1.6rem] flex h-[130px] flex-col content-center items-center md:top-[6rem] md:h-[432px]" />
+        {/* Screen */}
+        <div className="relative bottom-[1rem] flex flex-col items-center justify-center md:bottom-[3rem]">
+          <div className="h-[200px] w-[315px] border-[3px] border-black [transform:perspective(45px)_rotateX(1deg)] md:h-[850px] md:w-[1225px] md:[transform:perspective(200px)_rotateX(1deg)]"></div>
+          <div className="absolute h-[185px] w-[300px] bg-black [transform:perspective(45px)_rotateX(1deg)] md:h-[800px] md:w-[1175px] md:[transform:perspective(200px)_rotateX(1deg)]"></div>
         </div>
       </div>
-      <div className="absolute left-[33px] top-[1274px] h-[959px] w-[1462px] bg-[url(/assets/arcadeBottom.svg)] bg-center">
-        <div className="relative left-0 top-7 h-[180px] w-full">
-          <div className="relative bottom-10 left-[6rem] flex h-[180px] w-full flex-row items-center gap-x-[40rem]">
-            <Joystick />
-            <div className="relative top-6 flex flex-row gap-x-5">
-              <TopButton
-                className="h-[4.9rem] w-[9.4rem]"
-                stateProp="idle"
-                text="A"
-              />
-              <TopButton
-                className="h-[4.9rem] w-[9.4rem]"
-                stateProp="idle"
-                text="B"
-              />
-            </div>
+      <div className="z-10 flex h-screen w-screen basis-1/6 flex-col items-center">
+        <div className="flex h-[60px] scale-[0.3] flex-row items-center gap-x-[25rem] md:bottom-10 md:left-[6rem] md:h-[180px] md:scale-100 md:gap-x-[40rem]">
+          <Joystick className="-translate-x-[50px] -translate-y-[40px] md:-translate-x-[50px] md:translate-y-0" />
+          <div className="flex flex-row justify-between gap-x-[150px] md:-translate-x-[50px]">
+            <TopButton className="" stateProp="idle" text="A" />
+            <TopButton className="" stateProp="idle" text="B" />
           </div>
         </div>
-        <div className="relative left-[1060px] top-[100px] w-fit">
+        <div className="translate-x-[100px] translate-y-[10px] md:translate-x-[450px] md:translate-y-[100px]">
           <ConnectButton />
         </div>
       </div>

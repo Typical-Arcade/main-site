@@ -37,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${archivoBlack.variable}`}>
-      <body className="overflow-scroll">{children}</body>
+      <body className="hidden-scrollbar">{children}</body>
     </html>
   );
 }

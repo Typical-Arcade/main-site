@@ -33,7 +33,7 @@ export const TopButton = ({
       }}
     >
       <div
-        className={`relative scale-[1.3] ${
+        className={`relative ${
           state.state === 'click' ? 'top-[12px]' : 'top-[-2px]'
         } ${state.state === 'click' ? 'h-[47px]' : 'h-[61px]'}`}
       >
