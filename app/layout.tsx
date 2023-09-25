@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Archivo_Black, Archivo } from 'next/font/google';
 import './global.css';
+import { PropsWithChildren } from 'react';
 
 export const metadata: Metadata = {
   title: 'Typical Arcade',
@@ -30,11 +31,7 @@ const archivo = Archivo({
   variable: '--font-archivo-regular',
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={`${archivoBlack.variable}`}>
       <body className="hidden-scrollbar">{children}</body>
