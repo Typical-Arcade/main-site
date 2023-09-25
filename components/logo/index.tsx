@@ -1,14 +1,17 @@
+import Image from 'next/image';
 import { JSX } from 'react';
 
 interface Props {
-  className: any;
+  className: string;
 }
 
 export const Logo = ({ className }: Props): JSX.Element => {
   return (
     <div className={className}>
       <div className="relative inline-flex items-center justify-center gap-[10px] md:gap-[120px]">
-        <img
+        <Image
+          height={1}
+          width={1}
           className="relative h-[40px] w-[40px] object-cover md:h-[183.66px] md:w-[183.66px]"
           alt="App store"
           src="/assets/logo.svg"

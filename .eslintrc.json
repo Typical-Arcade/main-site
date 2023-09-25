@@ -6,9 +6,10 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "next"
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
   ],
-  "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -33,6 +34,36 @@
     "semi": [
       "error",
       "always"
+    ],
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          // Sort imports alphabetically in ascending order.
+          "order": "asc",
+          // Ignore case when sorting imports.
+          "caseInsensitive": true
+        },
+        /**
+         * import fs from 'fs';
+         *
+         * import package from 'npm-package';
+         *
+         * import xyz from '~/project-file';
+         *
+         * import index from '../';
+         *
+         * import sibling from './foo';
+         */
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "sibling",
+          "internal"
+        ],
+        "newlines-between": "always"
+      }
     ]
   }
 }

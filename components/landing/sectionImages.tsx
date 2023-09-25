@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { PropsWithChildren, JSX } from 'react';
+import { JSX } from 'react';
 
 type ImageProps = {
   imageClassName: string;

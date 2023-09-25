@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import { JSX } from 'react';
 
 import { Logo } from '../logo';
+
 import { ConnectButton } from './connectButton';
 import { Joystick } from './joystick';
 import { TopButton } from './topButton';
@@ -13,8 +15,10 @@ export const Arcade = ({ className }: Props): JSX.Element => {
   return (
     <div className={className}>
       <div className="flex h-screen w-screen flex-col items-center">
-        <img
-          className="absolute z-0"
+        <Image
+          width={1}
+          height={1}
+          className="absolute z-0 h-fit w-fit"
           src="/assets/arcade.svg"
           alt="arcade-base"
         />
