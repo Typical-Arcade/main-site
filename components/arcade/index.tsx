@@ -31,8 +31,8 @@ export const Arcade = (): JSX.Element => {
         <div className="flex h-[60px] scale-[0.3] flex-row items-center gap-x-[25rem] md:bottom-10 md:left-[6rem] md:h-[180px] md:scale-100 md:gap-x-[40rem]">
           <Joystick className="-translate-x-[50px] -translate-y-[40px] md:-translate-x-[50px] md:translate-y-0" />
           <div className="flex flex-row justify-between gap-x-[150px] md:-translate-x-[50px]">
-            <TopButton className="" stateProp="idle" text="A" />
-            <TopButton className="" stateProp="idle" text="B" />
+            <TopButton text="A" />
+            <TopButton text="B" />
           </div>
         </div>
         <div className="flex flex-col items-end w-[85%] md:w-1/2 md:basis-1/2 md:translate-y-40 translate-y-10">

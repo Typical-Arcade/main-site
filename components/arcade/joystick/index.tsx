@@ -1,6 +1,6 @@
 'use client';
 
-import { JSX, useState } from 'react';
+import { JSX, useEffect, useState } from 'react';
 
 import { ClassnameProps } from '../../types';
 
@@ -8,22 +8,20 @@ import { IdleJoystick } from './idle';
 import { LeftJoystick } from './left';
 import { RightJoystick } from './right';
 
+type JoystickPosition = 'idle' | 'left' | 'right';
+
 export const Joystick = ({ className }: ClassnameProps): JSX.Element => {
-  const [state, setState] = useState('idle');
+  const [state, setState] = useState<JoystickPosition>('idle');
 
-  function leftClick() {
-    setState('click-left');
-    setTimeout(() => {
-      setState('idle');
-    }, 100);
-  }
+  useEffect(() => {
+    if (state !== 'idle') {
+      const timeout = setTimeout(() => {
+        setState('idle');
+      }, 100);
 
-  function rightClick() {
-    setState('click-right');
-    setTimeout(() => {
-      setState('idle');
-    }, 100);
-  }
+      return () => clearTimeout(timeout);
+    }
+  }, [state]);
 
   return (
     <div className={className}>
@@ -31,8 +29,8 @@ export const Joystick = ({ className }: ClassnameProps): JSX.Element => {
         <div className="z-10">
           <div className="h-[64px] w-[60px]">
             {state === 'idle' && <IdleJoystick />}
-            {state === 'click-left' && <LeftJoystick />}
-            {state === 'click-right' && <RightJoystick />}
+            {state === 'left' && <LeftJoystick />}
+            {state === 'right' && <RightJoystick />}
           </div>
         </div>
         <div className="z-0">
@@ -45,7 +43,7 @@ export const Joystick = ({ className }: ClassnameProps): JSX.Element => {
               </div>
               <div
                 className="absolute left-0 top-0 h-[100px] w-[50%]"
-                onClick={leftClick}
+                onClick={() => setState('left')}
               >
                 <div className="relative left-[10%] top-[50%]">
                   <div className="inline-block h-[15px] w-[15px] rotate-[225deg] border-r-2 border-t-2 border-solid border-white"></div>
@@ -53,7 +51,7 @@ export const Joystick = ({ className }: ClassnameProps): JSX.Element => {
               </div>
               <div
                 className="absolute left-[156px] top-0 h-[100px] w-[50%]"
-                onClick={rightClick}
+                onClick={() => setState('right')}
               >
                 <div className="relative left-[80%] top-[50%]">
                   <div className="inline-block h-[15px] w-[15px] rotate-[45deg] border-r-2 border-t-2 border-solid border-white"></div>
