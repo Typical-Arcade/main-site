@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { JSX } from 'react';
 
@@ -8,13 +10,14 @@ type ImageProps = {
 
 function mapImages({ altSrcTuples, imageClassName }: ImageProps) {
   if (altSrcTuples.length > 0) {
-    return altSrcTuples.map(([alt, src]) => (
+    return altSrcTuples.map(([alt, src], index) => (
       <Image
         width={1}
         height={1}
         className={imageClassName}
         alt={alt}
         src={src}
+        key={`${alt}_${index}`}
       />
     ));
   }

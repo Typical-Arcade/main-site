@@ -1,4 +1,5 @@
 import { PropsWithChildren, JSX } from 'react';
+
 import { SectionImages } from './sectionImages';
 
 type Props = {
@@ -17,7 +18,7 @@ export const Section = ({
 }: PropsWithChildren<Props>): JSX.Element => {
   return (
     <div
-      className={`relative flex w-screen flex-col items-center justify-center gap-[40px] px-[15px] py-[50px] md:w-[1516px] ${
+      className={`relative flex w-screen flex-col items-center justify-center gap-[40px] px-[15px] py-[50px] md:w-3/4 ${
         isReverse ? 'md:flex-row-reverse' : 'md:flex-row'
       } md:gap-[180px] md:px-0 md:py-[80px]`}
     >
@@ -27,7 +28,7 @@ export const Section = ({
         </div>
         {children}
       </div>
-      <div className="relative inline-flex flex-[0_0_auto] items-start gap-[20px]">
+      <div className="relative inline-flex items-start gap-[20px]">
         <SectionImages
           altSrcTuples={altSrcTuples}
           imageClassName={imageClassName}

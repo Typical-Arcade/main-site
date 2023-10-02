@@ -8,10 +8,12 @@ import { SectionParagraph } from '../components/landing/sectionParagraph';
 
 export default function Page() {
   return (
-    <div className='h-full'>
-      <div className="flex w-screen flex-col items-center bg-gradient-to-b from-[#353535] to-[#090c0f]">
-        <Background className="absolute" />
-        <Arcade className="mt-8" />
+    <div className="bg-gradient-to-b from-[#353535] to-[#090c0f]">
+      <Background />
+      <div className="flex w-screen flex-col items-center md:mb-64">
+        <div className='md:min-h-[2500px] h-[700px]'>
+          <Arcade />
+        </div>
         <Section
           title="WHO DONE IT?"
           imageClassName="relative h-[160.98px] w-[160.98px] object-cover md:h-[247px] md:w-[247px]"
@@ -42,8 +44,9 @@ export default function Page() {
           isReverse={true}
         >
           <SectionParagraph>
-            Soon.... There is only two of us right now so games will come as soon
-            as we get to them. Stay up to date with announcements by following{' '}
+            Soon.... There is only two of us right now so games will come as
+            soon as we get to them. Stay up to date with announcements by
+            following{' '}
             <Link href="https://twitter.com/typicalarcade">
               <span className="underline">@typicalarcade</span>
             </Link>{' '}
@@ -65,8 +68,8 @@ export default function Page() {
             from his collections to bring you your daily dose of mini-games.
           </SectionParagraph>
         </Section>
-        <Footer className="h-fit w-full" />
       </div>
+      <Footer />
     </div>
   );
 }

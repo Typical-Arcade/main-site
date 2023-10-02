@@ -1,11 +1,9 @@
 import Image from 'next/image';
 import { JSX } from 'react';
 
-import { ClassnameProps } from '../types';
-
-export const Background = ({ className }: ClassnameProps): JSX.Element => {
+export const Background = (): JSX.Element => {
   return (
-    <div className={className}>
+    <div className='absolute'>
       <div className="relative flex w-screen flex-col items-center gap-[100px] overflow-hidden px-0 pb-0 pt-[50px] md:gap-[573px]">
         <div className="relative inset-x-3 top-3">
           <div className="relative -top-10 grid grid-cols-6 gap-x-8 md:-top-5 md:gap-x-10">
@@ -35,7 +33,7 @@ export const Background = ({ className }: ClassnameProps): JSX.Element => {
             ))}
           </div>
         </div>
-        <div className="relative h-[534px] w-screen md:h-[1628px]">
+        <div className="relative w-screen">
           <Image
             height={1}
             width={1}
