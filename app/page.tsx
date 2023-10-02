@@ -69,7 +69,9 @@ export default function Page() {
           </SectionParagraph>
         </Section>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,15 +1,14 @@
 'use client';
 
 import { JSX, useState } from 'react';
+
+import { ClassnameProps } from '../../types';
+
 import { IdleJoystick } from './idle';
-import { RightJoystick } from './right';
 import { LeftJoystick } from './left';
+import { RightJoystick } from './right';
 
-type Props = {
-  className: any,
-}
-
-export const Joystick = ({ className }: Props): JSX.Element => {
+export const Joystick = ({ className }: ClassnameProps): JSX.Element => {
   const [state, setState] = useState('idle');
 
   function leftClick() {

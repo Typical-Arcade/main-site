@@ -19,7 +19,7 @@ export const Arcade = (): JSX.Element => {
           alt="arcade-base"
         />
       </div>
-      <div className="z-10 flex flex-col items-center">
+      <div className="flex flex-col items-center">
         <Logo className="relative top-[1.6rem] flex h-[130px] flex-col content-center items-center md:top-[6rem] md:h-[432px]" />
         {/* Screen */}
         <div className="relative bottom-[1rem] flex flex-col items-center justify-center md:bottom-[3rem]">
@@ -27,7 +27,7 @@ export const Arcade = (): JSX.Element => {
           <div className="absolute h-[185px] w-[300px] bg-black [transform:perspective(45px)_rotateX(1deg)] md:h-[800px] md:w-[1175px] md:[transform:perspective(200px)_rotateX(1deg)]"></div>
         </div>
       </div>
-      <div className="z-10 flex w-screen flex-col items-center">
+      <div className="flex w-screen flex-col items-center">
         <div className="flex h-[60px] scale-[0.3] flex-row items-center gap-x-[25rem] md:bottom-10 md:left-[6rem] md:h-[180px] md:scale-100 md:gap-x-[40rem]">
           <Joystick className="-translate-x-[50px] -translate-y-[40px] md:-translate-x-[50px] md:translate-y-0" />
           <div className="flex flex-row justify-between gap-x-[150px] md:-translate-x-[50px]">
@@ -35,7 +35,7 @@ export const Arcade = (): JSX.Element => {
             <TopButton className="" stateProp="idle" text="B" />
           </div>
         </div>
-        <div className="translate-x-[100px] translate-y-[10px] md:translate-x-[450px] md:translate-y-[100px]">
+        <div className="flex flex-col items-end w-[85%] md:w-1/2 md:basis-1/2 md:translate-y-40 translate-y-10">
           <ConnectButton />
         </div>
       </div>
