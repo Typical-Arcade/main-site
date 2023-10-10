@@ -8,9 +8,7 @@ type Props = {
 
 type Action = 'click' | 'hover' | 'idle';
 
-export const TopButton = ({
-  text,
-}: Props): JSX.Element => {
+export const TopButton = ({ text }: Props): JSX.Element => {
   const [state, setState] = useState<Action>('idle');
   useEffect(() => {
     if (state === 'click') {
@@ -30,8 +28,8 @@ export const TopButton = ({
     >
       <div
         className={`relative ${
-          state === 'click' ? 'top-[12px]' : 'top-[-2px]'
-        } ${state === 'click' ? 'h-[47px]' : 'h-[61px]'}`}
+          state === 'click' ? 'top-[12px] h-[47px]' : 'top-[-2px] h-[61px]'
+        }`}
       >
         <div
           className={`absolute left-0 h-[42px] w-[107px] rounded-[53.5px/21px] bg-[#070807] ${

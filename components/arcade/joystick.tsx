@@ -2,11 +2,7 @@
 
 import { JSX, useEffect, useState } from 'react';
 
-import { ClassnameProps } from '../../types';
-
-import { IdleJoystick } from './idle';
-import { LeftJoystick } from './left';
-import { RightJoystick } from './right';
+import { ClassnameProps } from '../types';
 
 type JoystickPosition = 'idle' | 'left' | 'right';
 
@@ -28,9 +24,25 @@ export const Joystick = ({ className }: ClassnameProps): JSX.Element => {
       <div className="flex flex-col items-center md:h-[200px] md:w-[300px] md:scale-100">
         <div className="z-10">
           <div className="h-[64px] w-[60px]">
-            {state === 'idle' && <IdleJoystick />}
-            {state === 'left' && <LeftJoystick />}
-            {state === 'right' && <RightJoystick />}
+            <div
+              className={`relative h-[64px] ${
+                state === 'left'
+                  ? 'right-6 rotate-[-17.50deg]'
+                  : state === 'right'
+                    ? 'left-6 rotate-[17.50deg]'
+                    : ''
+              }`}
+            >
+              <div className="absolute left-[5px] top-[61px] h-[65px] w-[53px] rounded-br-[13px] bg-[#121516]">
+                <div className="absolute left-[41px] top-0 h-[62px] w-[9px] rounded-br-[13px] bg-white" />
+                <div className="absolute left-[3px] top-0 h-[62px] w-[9px] rotate-180 rounded-br-[13px] bg-white opacity-30" />
+              </div>
+              <div className="absolute left-0 top-0 h-[80px] w-[60px] rounded-[31px_31px_17px_17px] bg-black">
+                <div className="relative left-[3px] top-[4px] h-[86px] w-[54px] rounded-[31px_31px_17px_17px] bg-white">
+                  <div className="relative top-px h-[85px] w-[49px] rounded-[31px_31px_7px_15px] bg-black" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="z-0">

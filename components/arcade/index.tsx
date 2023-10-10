@@ -35,7 +35,7 @@ export const Arcade = (): JSX.Element => {
             <TopButton text="B" />
           </div>
         </div>
-        <div className="flex flex-col items-end w-[85%] md:w-1/2 md:basis-1/2 md:translate-y-40 translate-y-10">
+        <div className="flex w-[85%] translate-y-10 flex-col items-end md:w-1/2 md:basis-1/2 md:translate-y-40">
           <ConnectButton />
         </div>
       </div>
