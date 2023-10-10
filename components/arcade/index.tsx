@@ -59,9 +59,7 @@ export const Arcade = (): JSX.Element => {
         <div className="relative bottom-[1rem] flex flex-col items-center justify-center md:bottom-[3rem]">
           <div className="h-[200px] w-[315px] border-[3px] border-black [transform:perspective(45px)_rotateX(1deg)] md:h-[850px] md:w-[1225px] md:[transform:perspective(200px)_rotateX(1deg)]"></div>
           <div className="absolute h-[185px] w-[300px] bg-black [transform:perspective(45px)_rotateX(1deg)] md:h-[800px] md:w-[1175px] md:[transform:perspective(200px)_rotateX(1deg)]">
-            <div className="flex h-full flex-col items-center justify-center gap-16 font-archivo-black text-white">
-              <GameScreen gameScreen={gameScreen}/>
-            </div>
+            <GameScreen gameScreen={gameScreen}/>
           </div>
         </div>
       </div>

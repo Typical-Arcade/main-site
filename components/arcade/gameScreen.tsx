@@ -7,11 +7,11 @@ type Props = {
 
 export const GameScreen = ({ gameScreen }: Props): JSX.Element => {
   const screenChosen: JSX.Element[] = [
-    <>
-      <span className="text-center text-9xl">GM</span>
-      <span className="text-center text-5xl">MOVE JOYSTICK TO SELECT GAME</span>
-      <span className="text-center text-5xl">PRESS A TO START</span>
-    </>,
+    <div className="flex h-full flex-col items-center justify-center gap-3 md:gap-16 font-archivo-black text-white">
+      <span className="text-center text-4xl md:text-9xl">GM</span>
+      <span className="text-center text-xl md:text-5xl">MOVE JOYSTICK TO SELECT GAME</span>
+      <span className="text-center text-xl md:text-5xl">PRESS A TO START</span>
+    </div>,
     <>
       <Image
         width={500}
