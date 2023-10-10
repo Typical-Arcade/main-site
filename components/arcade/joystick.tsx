@@ -1,24 +1,17 @@
-'use client';
+import { Dispatch, JSX, SetStateAction } from 'react';
 
-import { JSX, useEffect, useState } from 'react';
+import { ClassnameProps, JoystickPosition } from '../types';
 
-import { ClassnameProps } from '../types';
+type Props = ClassnameProps & {
+  state: string;
+  setState: Dispatch<SetStateAction<JoystickPosition>>;
+};
 
-type JoystickPosition = 'idle' | 'left' | 'right';
-
-export const Joystick = ({ className }: ClassnameProps): JSX.Element => {
-  const [state, setState] = useState<JoystickPosition>('idle');
-
-  useEffect(() => {
-    if (state !== 'idle') {
-      const timeout = setTimeout(() => {
-        setState('idle');
-      }, 100);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [state]);
-
+export const Joystick = ({
+  className,
+  state,
+  setState,
+}: Props): JSX.Element => {
   return (
     <div className={className}>
       <div className="flex flex-col items-center md:h-[200px] md:w-[300px] md:scale-100">

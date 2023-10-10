@@ -1,15 +1,20 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { JSX, useEffect, useState } from 'react';
+
+import { games } from './games';
 
 type Props = {
   text: 'A' | 'B';
+  gameScreen: number;
 };
 
 type Action = 'click' | 'hover' | 'idle';
 
-export const TopButton = ({ text }: Props): JSX.Element => {
+export const TopButton = ({ text, gameScreen }: Props): JSX.Element => {
   const [state, setState] = useState<Action>('idle');
+  const router = useRouter();
   useEffect(() => {
     if (state === 'click') {
       const timeout = setTimeout(() => {
@@ -22,7 +27,10 @@ export const TopButton = ({ text }: Props): JSX.Element => {
 
   return (
     <div
-      onClick={() => setState('click')}
+      onClick={() => {
+        setState('click');
+        router.push(`${games[gameScreen - 1]}`);
+      }}
       onMouseOver={() => setState('hover')}
       onMouseOut={() => setState('idle')}
     >
