@@ -12,9 +12,9 @@ function mapImages({ altSrcTuples, imageClassName }: ImageProps) {
   if (altSrcTuples.length > 0) {
     return altSrcTuples.map(([alt, src], index) => (
       <Image
-        width={1}
-        height={1}
-        className={imageClassName}
+        width={400}
+        height={400}
+        className={`object-cover rounded-[161.5px] ${imageClassName}`}
         alt={alt}
         src={src}
         key={`${alt}_${index}`}

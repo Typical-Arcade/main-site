@@ -10,11 +10,11 @@ export const Logo = ({ className }: Props): JSX.Element => {
     <div className={className}>
       <div className="relative inline-flex items-center justify-center gap-[10px] md:gap-[120px]">
         <Image
-          height={1}
-          width={1}
-          className="relative h-[40px] w-[40px] object-cover md:h-[183.66px] md:w-[183.66px]"
+          height={1024}
+          width={1024}
+          className="h-[40px] w-[40px] object-cover md:rounded-3xl rounded-md md:h-[183.66px] md:w-[183.66px]"
           alt="App store"
-          src="/assets/logo.svg"
+          src="/assets/logo.png"
         />
         <div className="relative flex flex-col items-center">
           <div className="relative w-fit whitespace-nowrap font-archivo-black text-[1rem] font-normal leading-[normal] tracking-[0] text-black md:text-[75px]">

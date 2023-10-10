@@ -11,15 +11,15 @@ export default function Page() {
     <div className="bg-gradient-to-b from-[#353535] to-[#090c0f]">
       <Background />
       <div className="flex w-screen flex-col items-center md:mb-64">
-        <div className='md:min-h-[2500px] h-[700px]'>
+        <div className="h-[700px] md:min-h-[2500px]">
           <Arcade />
         </div>
         <Section
           title="WHO DONE IT?"
-          imageClassName="relative h-[160.98px] w-[160.98px] object-cover md:h-[247px] md:w-[247px]"
+          imageClassName="relative h-[160.98px] w-[160.98px] md:h-[247px] md:w-[247px]"
           altSrcTuples={[
-            ['Potn pfp', '/assets/landing/potn.svg'],
-            ['Bd pfp', '/assets/landing/birddog.svg'],
+            ['Potn pfp', '/assets/landing/potn.png'],
+            ['Bd pfp', '/assets/landing/birddog.png'],
           ]}
           isReverse={false}
         >
@@ -39,8 +39,8 @@ export default function Page() {
         </Section>
         <Section
           title="WEN GAMES?"
-          imageClassName="relative h-[199px] w-[199px] rounded-[161.5px] bg-[#d9d9d9] md:h-[323px] md:w-[323px]"
-          altSrcTuples={[]}
+          imageClassName="relative h-[199px] w-[199px] md:h-[323px] md:w-[323px]"
+          altSrcTuples={[['wen pfp', '/assets/wen.gif']]}
           isReverse={true}
         >
           <SectionParagraph>
@@ -56,7 +56,7 @@ export default function Page() {
         <Section
           title="TYPICAL FRIENDS"
           imageClassName="relative h-[199px] w-[199px] object-cover md:h-[323px] md:w-[323px]"
-          altSrcTuples={[['Tf pfp', '/assets/landing/tf.svg']]}
+          altSrcTuples={[['Tf pfp', '/assets/landing/tf.png']]}
           isReverse={false}
         >
           <SectionParagraph>
