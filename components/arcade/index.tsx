@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { JSX, useEffect, useState } from 'react';
 
+import arcade from '../../public/assets/arcade.svg';
 // import { ConnectButton } from './connectButton';
 import { Logo } from '../logo';
 import { JoystickPosition } from '../types';
@@ -46,25 +47,21 @@ export const Arcade = (): JSX.Element => {
     <div className="mt-8 flex w-screen flex-col items-center">
       <div className="absolute flex flex-col items-center">
         <Image
-          width={1}
-          height={1}
           className="w-fit"
-          src="/assets/arcade.svg"
+          src={arcade}
           alt="arcade-base"
         />
       </div>
       <div className="flex flex-col items-center">
-        <Logo className="relative top-[1.6rem] flex h-[130px] flex-col content-center items-center md:top-[6rem] md:h-[432px]" />
+        <Logo className="relative top-[1.6rem] flex h-[130px] flex-col content-center items-center md:top-[6rem] md:h-[400px]" />
         {/* Screen */}
-        <div className="relative bottom-[1rem] flex flex-col items-center justify-center md:bottom-[3rem]">
-          <div className="h-[200px] w-[315px] border-[3px] border-black [transform:perspective(45px)_rotateX(1deg)] md:h-[850px] md:w-[1225px] md:[transform:perspective(200px)_rotateX(1deg)]"></div>
-          <div className="absolute h-[185px] w-[300px] bg-black [transform:perspective(45px)_rotateX(1deg)] md:h-[800px] md:w-[1175px] md:[transform:perspective(200px)_rotateX(1deg)]">
-            <GameScreen gameScreen={gameScreen}/>
-          </div>
+        <div className="relative flex flex-col items-center justify-center">
+          <div className="h-[200px] w-[300px] border-[3px] border-black [transform:perspective(45px)_rotateX(1deg)] md:h-[825px] md:w-[1225px] md:[transform:perspective(200px)_rotateX(1deg)]"></div>
+          <GameScreen gameScreen={gameScreen}/>
         </div>
       </div>
       <div className="flex w-screen flex-col items-center">
-        <div className="flex h-[60px] scale-[0.3] flex-row items-center gap-x-[25rem] md:bottom-10 md:left-[6rem] md:h-[180px] md:scale-100 md:gap-x-[40rem]">
+        <div className="flex h-[100px] scale-[0.3] flex-row items-center gap-x-[33rem] md:bottom-10 md:left-[6rem] md:h-[275px] md:scale-100 md:gap-x-[40rem]">
           <Joystick
             className="-translate-x-[50px] -translate-y-[40px] md:-translate-x-[50px] md:translate-y-0"
             state={state}

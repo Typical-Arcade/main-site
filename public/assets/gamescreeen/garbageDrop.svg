@@ -1,5 +1,5 @@
 <svg width="1161" height="767" viewBox="0 0 1161 767" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 766.5L21 0H1137.5L1160.5 766.5H0Z" fill="#FF90B2" />
+  <path d="M0 766.5V0H1160.5V766.5H0Z" fill="#FF90B2" />
   <mask id="mask0_128_1211" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="72" y="48" width="1016" height="671">
     <path d="M73 718L91.349 49H1066.9L1087 718H73Z" fill="#FF90B2" stroke="black" />
   </mask>

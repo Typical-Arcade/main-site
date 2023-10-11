@@ -6,7 +6,7 @@ import { Footer } from '../components/landing/footer';
 import { Section } from '../components/landing/section';
 import { SectionParagraph } from '../components/landing/sectionParagraph';
 
-export default function Page() {
+export default async function Page() {
   return (
     <div className="bg-gradient-to-b from-[#353535] to-[#090c0f]">
       <Background />

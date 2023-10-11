@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import { JSX } from 'react';
 
+import building from '../../public/assets/building.svg';
+import cloud from '../../public/assets/cloud.svg';
+
 const clouds = Array.from({ length: 6 }, (_, i) => (
   <div key={`cloud-${i * 10}`}>
     <Image
-      height={1}
-      width={1}
       className="w-auto md:w-1/2"
-      src="/assets/cloud.svg"
+      src={cloud}
       alt="cloud"
     />
   </div>
@@ -27,10 +28,8 @@ export const Background = (): JSX.Element => {
         </div>
         <div className="relative w-screen">
           <Image
-            height={1}
-            width={1}
             className="top-0 h-[413px] w-screen md:h-[1258px]"
-            src="/assets/building.svg"
+            src={building}
             alt="building"
           />
         </div>
