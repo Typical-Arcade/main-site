@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-import { Arcade } from '../components/arcade';
-import { Background } from '../components/landing/background';
-import { Footer } from '../components/landing/footer';
-import { Section } from '../components/landing/section';
-import { SectionParagraph } from '../components/landing/sectionParagraph';
+import Arcade from '../components/arcade';
+import Background from '../components/landing/background';
+import Footer from '../components/landing/footer';
+import Section from '../components/landing/section';
+import SectionParagraph from '../components/landing/sectionParagraph';
 
 export default async function Page() {
   return (

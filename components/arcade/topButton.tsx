@@ -12,7 +12,7 @@ type Props = {
 
 type Action = 'click' | 'hover' | 'idle';
 
-export const TopButton = ({ text, gameScreen }: Props): JSX.Element => {
+export default function TopButton({ text, gameScreen }: Props): JSX.Element {
   const [state, setState] = useState<Action>('idle');
   const { push } = useRouter();
   useEffect(() => {
@@ -55,4 +55,4 @@ export const TopButton = ({ text, gameScreen }: Props): JSX.Element => {
       </div>
     </div>
   );
-};
+}

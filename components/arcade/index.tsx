@@ -5,16 +5,16 @@ import { JSX, useEffect, useState } from 'react';
 
 import arcade from '../../public/assets/arcade.svg';
 // import { ConnectButton } from './connectButton';
-import { Logo } from '../logo';
+import Logo from '../logo';
 import { JoystickPosition } from '../types';
 
-import { GameScreen } from './gameScreen';
-import { Joystick } from './joystick';
-import { TopButton } from './topButton';
+import GameScreen from './gameScreen';
+import Joystick from './joystick';
+import TopButton from './topButton';
 
 const NUMBER_GAME_SCREENS = 1;
 
-export const Arcade = (): JSX.Element => {
+export default function Arcade(): JSX.Element {
   const [state, setState] = useState<JoystickPosition>('idle');
   const [gameScreen, setGameScreen] = useState<number>(0);
 
@@ -78,4 +78,4 @@ export const Arcade = (): JSX.Element => {
       </div>
     </div>
   );
-};
+}

@@ -1,6 +1,6 @@
 import { PropsWithChildren, JSX } from 'react';
 
-import { SectionImages } from './sectionImages';
+import SectionImages from './sectionImages';
 
 type Props = {
   imageClassName: string;
@@ -9,13 +9,13 @@ type Props = {
   isReverse: boolean;
 };
 
-export const Section = ({
+export default function Section({
   title,
   children,
   imageClassName,
   altSrcTuples,
   isReverse,
-}: PropsWithChildren<Props>): JSX.Element => {
+}: PropsWithChildren<Props>): JSX.Element {
   return (
     <div
       className={`relative flex w-screen flex-col items-center justify-center gap-[40px] px-[15px] py-[50px] md:w-3/4 ${
@@ -36,4 +36,4 @@ export const Section = ({
       </div>
     </div>
   );
-};
+}

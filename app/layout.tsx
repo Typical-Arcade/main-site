@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Archivo_Black, Archivo } from 'next/font/google';
+import { Archivo_Black } from 'next/font/google';
 import './global.css';
 import { PropsWithChildren } from 'react';
 
@@ -24,12 +24,12 @@ const archivoBlack = Archivo_Black({
   variable: '--font-archivo-black',
 });
 
-const archivo = Archivo({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-archivo-regular',
-});
+// const archivo = Archivo({
+//   weight: '400',
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-archivo-regular',
+// });
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (

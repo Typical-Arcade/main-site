@@ -5,7 +5,7 @@ import { JSX } from 'react';
 import xLogo from '../../public/assets/landing/x-logo.svg';
 import logo from '../../public/assets/logo.png';
 
-export const Footer = (): JSX.Element => {
+export default function Footer(): JSX.Element {
   return (
     <footer className="flex w-full flex-row items-center justify-center bg-[#111314]">
       <div className="flex basis-full flex-row items-center justify-evenly md:h-[80px] md:justify-center">
@@ -31,4 +31,4 @@ export const Footer = (): JSX.Element => {
       </div>
     </footer>
   );
-};
+}

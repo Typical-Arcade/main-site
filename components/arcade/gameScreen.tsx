@@ -9,7 +9,7 @@ type Props = {
   gameScreen: number;
 };
 
-export const GameScreen = ({ gameScreen }: Props): JSX.Element => {
+export default function GameScreen({ gameScreen }: Props): JSX.Element {
   const screens: JSX.Element[] = [
     <>
       <Image
@@ -40,4 +40,4 @@ export const GameScreen = ({ gameScreen }: Props): JSX.Element => {
       {chosenScreen}
     </div>
   );
-};
+}

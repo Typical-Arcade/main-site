@@ -7,11 +7,11 @@ type Props = ClassnameProps & {
   setState: Dispatch<SetStateAction<JoystickPosition>>;
 };
 
-export const Joystick = ({
+export default function Joystick({
   className,
   state,
   setState,
-}: Props): JSX.Element => {
+}: Props): JSX.Element {
   return (
     <div className={className}>
       <div className="flex flex-col items-center md:h-[200px] md:w-[300px] md:scale-100">
@@ -68,4 +68,4 @@ export const Joystick = ({
       </div>
     </div>
   );
-};
+}

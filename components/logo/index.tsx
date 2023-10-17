@@ -7,7 +7,7 @@ interface Props {
   className: string;
 }
 
-export const Logo = ({ className }: Props): JSX.Element => {
+export default function Logo({ className }: Props): JSX.Element {
   return (
     <div className={className}>
       <div className="relative inline-flex items-center justify-center gap-[10px] md:gap-[120px]">
@@ -27,4 +27,4 @@ export const Logo = ({ className }: Props): JSX.Element => {
       </div>
     </div>
   );
-};
+}

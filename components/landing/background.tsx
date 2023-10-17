@@ -14,7 +14,7 @@ const clouds = Array.from({ length: 6 }, (_, i) => (
   </div>
 ));
 
-export const Background = (): JSX.Element => {
+export default function Background(): JSX.Element {
   return (
     <div className='absolute'>
       <div className="relative flex w-screen flex-col items-center gap-[100px] overflow-hidden px-0 pb-0 pt-[50px] md:gap-[573px]">
@@ -36,4 +36,4 @@ export const Background = (): JSX.Element => {
       </div>
     </div>
   );
-};
+}

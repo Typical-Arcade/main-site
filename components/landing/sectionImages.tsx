@@ -27,10 +27,10 @@ function mapImages({ altSrcTuples, imageClassName }: ImageProps) {
   );
 }
 
-export const SectionImages = (imageProps: ImageProps): JSX.Element => {
+export default function SectionImages(imageProps: ImageProps): JSX.Element {
   return (
     <div className="relative inline-flex flex-[0_0_auto] items-start gap-[20px]">
       {mapImages(imageProps)}
     </div>
   );
-};
+}
