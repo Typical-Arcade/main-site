@@ -27,9 +27,7 @@ export default function Arcade(): JSX.Element {
       }
     }
     if (state === 'left') {
-      if (gameScreen === 1) {
-        setGameScreen(gameScreen);
-      } else {
+      if (gameScreen >= 1) {
         setGameScreen(gameScreen - 1);
       }
     }
@@ -44,37 +42,20 @@ export default function Arcade(): JSX.Element {
   }, [state]);
 
   return (
-    <div className="mt-8 flex w-screen flex-col items-center">
-      <div className="absolute flex flex-col items-center">
-        <Image
-          className="w-fit"
-          src={arcade}
-          alt="arcade-base"
+    <div className="flex h-full w-screen flex-col items-center gap-36">
+      <Image className="absolute" src={arcade} alt="arcade-base" />
+      <div className="relative top-[4%] flex h-[45%] w-1/2 flex-col items-center">
+        <Logo className="basis-[30%]" />
+        <div className="absolute top-[25%] h-3/4 w-[97%] border-[3px] border-black [transform:perspective(45px)_rotateX(1deg)] md:[transform:perspective(200px)_rotateX(1deg)]"></div>
+        <GameScreen className="w-full basis-4/5" gameScreen={gameScreen} />
+      </div>
+      <div className="flex h-[8%] w-1/2 flex-row items-center justify-center gap-[60%]">
+        <Joystick
+          className="translate-y-[-15%]"
+          state={state}
+          setState={setState}
         />
-      </div>
-      <div className="flex flex-col items-center">
-        <Logo className="relative top-[1.6rem] flex h-[130px] flex-col content-center items-center md:top-[6rem] md:h-[400px]" />
-        {/* Screen */}
-        <div className="relative flex flex-col items-center justify-center">
-          <div className="h-[200px] w-[300px] border-[3px] border-black [transform:perspective(45px)_rotateX(1deg)] md:h-[825px] md:w-[1225px] md:[transform:perspective(200px)_rotateX(1deg)]"></div>
-          <GameScreen gameScreen={gameScreen}/>
-        </div>
-      </div>
-      <div className="flex w-screen flex-col items-center">
-        <div className="flex h-[100px] scale-[0.3] flex-row items-center gap-x-[33rem] md:bottom-10 md:left-[6rem] md:h-[275px] md:scale-100 md:gap-x-[40rem]">
-          <Joystick
-            className="-translate-x-[50px] -translate-y-[40px] md:-translate-x-[50px] md:translate-y-0"
-            state={state}
-            setState={setState}
-          />
-          <div className="flex flex-row justify-between gap-x-[150px] md:-translate-x-[50px]">
-            <TopButton text="A" gameScreen={gameScreen}/>
-            {/* <TopButton text="B" /> */}
-          </div>
-        </div>
-        {/* <div className="flex w-[85%] translate-y-10 flex-col items-end md:w-1/2 md:basis-1/2 md:translate-y-40">
-          <ConnectButton />
-        </div> */}
+        <TopButton className="scale-x-[-1]" text="A" gameScreen={gameScreen} />
       </div>
     </div>
   );

@@ -7,4 +7,8 @@
   .hidden-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  .debug-border {
+    border: 1px red solid
+  }
 }

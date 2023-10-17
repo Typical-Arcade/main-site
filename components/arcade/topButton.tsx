@@ -3,16 +3,22 @@
 import { useRouter } from 'next/navigation';
 import { JSX, useEffect, useState } from 'react';
 
+import { ClassnameProps } from '../types';
+
 import { games } from './games';
 
 type Props = {
   text: 'A' | 'B';
   gameScreen: number;
-};
+} & ClassnameProps;
 
 type Action = 'click' | 'hover' | 'idle';
 
-export default function TopButton({ text, gameScreen }: Props): JSX.Element {
+export default function TopButton({
+  text,
+  gameScreen,
+  className,
+}: Props): JSX.Element {
   const [state, setState] = useState<Action>('idle');
   const { push } = useRouter();
   useEffect(() => {
@@ -27,6 +33,7 @@ export default function TopButton({ text, gameScreen }: Props): JSX.Element {
 
   return (
     <div
+      className={className}
       onClick={() => {
         setState('click');
         push(`${games[gameScreen - 1]}`);

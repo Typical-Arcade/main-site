@@ -14,7 +14,7 @@ function mapImages({ altSrcTuples, imageClassName }: ImageProps) {
       <Image
         width={400}
         height={400}
-        className={`object-cover rounded-[161.5px] ${imageClassName}`}
+        className={`rounded-[161.5px] object-cover ${imageClassName}`}
         alt={alt}
         src={src}
         key={`${alt}_${index}`}

@@ -11,7 +11,7 @@ export default async function Page() {
     <div className="bg-gradient-to-b from-[#353535] to-[#090c0f]">
       <Background />
       <div className="flex w-screen flex-col items-center md:mb-64">
-        <div className="h-[700px] md:min-h-[2500px]">
+        <div className="mt-[1.5%] min-h-[44rem] md:h-[160rem]">
           <Arcade />
         </div>
         <Section

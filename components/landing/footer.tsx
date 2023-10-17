@@ -21,11 +21,7 @@ export default function Footer(): JSX.Element {
         </div>
         <div className="flex basis-1/12 flex-col items-center md:basis-1/4">
           <Link href="https://twitter.com/typicalarcade">
-            <Image
-              className="w-fit"
-              alt="XLogo"
-              src={xLogo}
-            />
+            <Image className="w-fit" alt="XLogo" src={xLogo} />
           </Link>
         </div>
       </div>
