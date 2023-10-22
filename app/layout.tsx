@@ -33,7 +33,7 @@ const archivo = Archivo({
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" className={`${archivoBlack.variable} ${archivo.variable}`}>
+    <html lang="en" className={`${archivoBlack.variable} ${archivo.variable} overscroll-contain`}>
       <body className="hidden-scrollbar">{children}</body>
     </html>
   );
