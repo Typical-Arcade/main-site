@@ -1,7 +1,10 @@
+// eslint-disable-next-line import/no-unresolved
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Archivo_Black, Archivo } from 'next/font/google';
-import './global.css';
 import { PropsWithChildren } from 'react';
+
+import './global.css';
 
 export const metadata: Metadata = {
   title: 'Typical Arcade',
@@ -34,7 +37,10 @@ const archivo = Archivo({
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={`${archivoBlack.variable} ${archivo.variable} overscroll-contain`}>
-      <body className="hidden-scrollbar">{children}</body>
+      <body className="hidden-scrollbar">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
