@@ -52,7 +52,7 @@ export default function Arcade(): JSX.Element {
           gameScreen={gameScreen}
         />
       </div>
-      <div className="flex h-fit w-full flex-row items-center justify-around">
+      <div className="flex h-fit w-[80rem] flex-row items-center justify-around">
         <Joystick
           className="relative bottom-10"
           state={state}

@@ -17,6 +17,14 @@ export default function Joystick({
       <div className="relative h-[8rem] w-[11rem]">
         <div className="flex h-[8rem] w-[11rem] flex-col items-center">
           <div
+            className="z-20 absolute h-full w-1/2 self-baseline hover:cursor-pointer"
+            onClick={() => setState('left')}
+          />
+          <div
+            className="z-20 absolute h-full w-1/2 self-end hover:cursor-pointer"
+            onClick={() => setState('right')}
+          />
+          <div
             className={`relative z-10 h-[3.8rem] w-[3rem] ${
               state === 'left'
                 ? 'right-6 rotate-[-17.50deg]'
@@ -42,16 +50,10 @@ export default function Joystick({
             <div className="absolute h-[4rem] w-[9rem] rounded-[11rem/5rem] bg-[#181a19]" />
             <div className="absolute h-[2rem] w-[4rem] rounded-[45rem/20rem] bg-black" />
             <div className="relative flex h-[5rem] w-[11rem] flex-row">
-              <div
-                className="flex h-full w-1/2 flex-row items-center pl-2"
-                onClick={() => setState('left')}
-              >
+              <div className="flex h-full w-1/2 flex-row items-center pl-2">
                 <div className="h-[0.5rem] w-[0.5rem] rotate-[225deg] border-r-[0.1rem] border-t-[0.1rem] border-solid border-white" />
               </div>
-              <div
-                className="left-[50%] flex h-full w-1/2 flex-row items-center justify-end pr-2"
-                onClick={() => setState('right')}
-              >
+              <div className="left-[50%] flex h-full w-1/2 flex-row items-center justify-end pr-2">
                 <div className="h-[0.5rem] w-[0.5rem] rotate-[45deg] border-r-[0.1rem] border-t-[0.1rem] border-solid border-white" />
               </div>
             </div>

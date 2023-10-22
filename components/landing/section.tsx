@@ -18,7 +18,7 @@ export default function Section({
 }: PropsWithChildren<Props>): JSX.Element {
   return (
     <div
-      className={`relative flex w-screen flex-col items-center justify-center gap-[4rem] px-[1.5rem] py-[5rem] ${
+      className={`relative flex w-screen md:w-3/4 lg:w-1/2 flex-col items-center justify-center gap-[4rem] px-[1.5rem] py-[5rem] ${
         isReverse ? 'flex-row-reverse' : 'flex-row'
       }`}
     >

@@ -41,7 +41,7 @@ export default function TopButton({
       onMouseOver={() => setState('hover')}
       onMouseOut={() => setState('idle')}
     >
-      <div className="relative h-[5rem] w-[6.5rem]">
+      <div className="relative h-[5rem] w-[6.5rem] hover:cursor-pointer">
         <div className="flex flex-col items-center">
           <div
             className={`
