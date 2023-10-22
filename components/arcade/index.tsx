@@ -43,8 +43,12 @@ export default function Arcade(): JSX.Element {
 
   return (
     <div className="flex h-full w-screen flex-col items-center">
-      <Image className="absolute h-[92rem] w-full" src={arcade} alt="arcade-base" />
-      <div className="relative pt-[4rem] flex h-[54rem] w-full flex-col items-center">
+      <Image
+        className="absolute h-[92rem] w-full"
+        src={arcade}
+        alt="arcade-base"
+      />
+      <div className="relative flex h-[54rem] w-full flex-col items-center pt-[4rem]">
         <Logo className="h-[13.5rem]" />
         <div className="absolute top-[16.5rem] h-[33.5rem] w-[50rem] border-[0.2rem] border-black [transform:perspective(6rem)_rotateX(1deg)]"></div>
         <GameScreen
