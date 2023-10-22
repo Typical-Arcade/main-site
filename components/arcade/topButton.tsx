@@ -20,7 +20,7 @@ export default function TopButton({
   className,
 }: Props): JSX.Element {
   const [state, setState] = useState<Action>('idle');
-  const { push } = useRouter();
+  const router = useRouter();
   useEffect(() => {
     if (state === 'click') {
       const timeout = setTimeout(() => {
@@ -36,28 +36,31 @@ export default function TopButton({
       className={className}
       onClick={() => {
         setState('click');
-        push(`${games[gameScreen - 1]}`);
+        if (gameScreen >= 1) router.push(`${games[gameScreen - 1]}`);
       }}
       onMouseOver={() => setState('hover')}
       onMouseOut={() => setState('idle')}
     >
-      <div
-        className={`relative ${
-          state === 'click' ? 'top-[12px] h-[47px]' : 'top-[-2px] h-[61px]'
-        }`}
-      >
-        <div
-          className={`absolute left-0 h-[42px] w-[107px] rounded-[53.5px/21px] bg-[#070807] ${
-            state === 'click' ? 'top-[5px]' : 'top-[19px]'
-          }`}
-        />
-        <div
-          className={`absolute left-[9px] top-0 h-[36px] w-[89px] rounded-[44.5px/18px] border-2 border-solid border-white ${
-            state === 'hover' ? 'bg-[#444444]' : 'bg-[#1c1e1c]'
-          }`}
-        />
-        <div className="absolute left-[44px] top-[1px] whitespace-nowrap font-archivo-black text-[24.4px] leading-[normal] tracking-[0] text-white">
-          {text}
+      <div className="relative h-[5rem] w-[6.5rem]">
+        <div className="flex flex-col items-center">
+          <div
+            className={`
+              z-10 absolute w-[6rem] rounded-[100%_100%_75%_75%] bg-[#1d1f1d]
+              ${state === 'click' ? 'h-[3rem] top-[1.3rem]' : 'h-[4rem] top-0'}
+            `}
+          />
+          <div
+            className={`
+              z-10 relative flex h-[3rem] w-[6rem] flex-col items-center justify-center rounded-[100%] border-[0.2rem] border-solid border-white 
+              ${state === 'hover' ? 'bg-[#444444]' : 'bg-[#1C1E1C]'}
+              ${state === 'click' ? 'top-[1.3rem]' : 'top-0'}
+            `}
+          >
+            <div className="relative top-0 whitespace-nowrap font-archivo-black text-[2rem] leading-[normal] tracking-[0] text-white">
+              {text}
+            </div>
+          </div>
+          <div className="z-0 relative bottom-[1.5rem] h-[3rem] w-[6.5rem] rounded-[100%] bg-[#070807]" />
         </div>
       </div>
     </div>

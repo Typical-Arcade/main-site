@@ -42,20 +42,27 @@ export default function Arcade(): JSX.Element {
   }, [state]);
 
   return (
-    <div className="flex h-full w-screen flex-col items-center gap-36">
-      <Image className="absolute" src={arcade} alt="arcade-base" />
-      <div className="relative top-[4%] flex h-[45%] w-1/2 flex-col items-center">
-        <Logo className="basis-[30%]" />
-        <div className="absolute top-[25%] h-3/4 w-[97%] border-[3px] border-black [transform:perspective(45px)_rotateX(1deg)] md:[transform:perspective(200px)_rotateX(1deg)]"></div>
-        <GameScreen className="w-full basis-4/5" gameScreen={gameScreen} />
+    <div className="flex h-full w-screen flex-col items-center">
+      <Image className="absolute h-[92rem] w-full" src={arcade} alt="arcade-base" />
+      <div className="relative pt-[4rem] flex h-[54rem] w-full flex-col items-center">
+        <Logo className="h-[13.5rem]" />
+        <div className="absolute top-[16.5rem] h-[33.5rem] w-[50rem] border-[0.2rem] border-black [transform:perspective(6rem)_rotateX(1deg)]"></div>
+        <GameScreen
+          className="relative top-[0.75rem] h-[30rem] w-[45rem]"
+          gameScreen={gameScreen}
+        />
       </div>
-      <div className="flex h-[8%] w-1/2 flex-row items-center justify-center gap-[60%]">
+      <div className="flex h-fit w-full flex-row items-center justify-around">
         <Joystick
-          className="translate-y-[-15%]"
+          className="relative bottom-10"
           state={state}
           setState={setState}
         />
-        <TopButton className="scale-x-[-1]" text="A" gameScreen={gameScreen} />
+        <TopButton
+          className="relative bottom-7 self-end"
+          text="A"
+          gameScreen={gameScreen}
+        />
       </div>
     </div>
   );

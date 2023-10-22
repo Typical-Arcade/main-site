@@ -14,7 +14,7 @@ function mapImages({ altSrcTuples, imageClassName }: ImageProps) {
       <Image
         width={400}
         height={400}
-        className={`rounded-[161.5px] object-cover ${imageClassName}`}
+        className={`rounded-[25rem] object-cover ${imageClassName}`}
         alt={alt}
         src={src}
         key={`${alt}_${index}`}
@@ -23,13 +23,13 @@ function mapImages({ altSrcTuples, imageClassName }: ImageProps) {
   }
 
   return (
-    <div className="relative h-[199px] w-[199px] rounded-[161.5px] bg-[#d9d9d9] md:h-[323px] md:w-[323px]" />
+    <div className="relative h-[20rem] w-[20rem] rounded-[25rem] bg-[#d9d9d9]" />
   );
 }
 
 export default function SectionImages(imageProps: ImageProps): JSX.Element {
   return (
-    <div className="relative inline-flex flex-[0_0_auto] items-start gap-[20px]">
+    <div className="relative inline-flex flex-[0_0_auto] items-start gap-[2rem]">
       {mapImages(imageProps)}
     </div>
   );

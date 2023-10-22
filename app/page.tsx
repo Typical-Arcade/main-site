@@ -10,13 +10,13 @@ export default async function Page() {
   return (
     <div className="bg-gradient-to-b from-[#353535] to-[#090c0f]">
       <Background />
-      <div className="flex w-screen flex-col items-center md:mb-64">
-        <div className="mt-[1.5%] min-h-[44rem] md:h-[160rem]">
+      <div className="flex w-screen flex-col items-center mb-[10rem]">
+        <div className="mt-[1.5%] h-[100rem]">
           <Arcade />
         </div>
         <Section
           title="WHO DONE IT?"
-          imageClassName="relative h-[160.98px] w-[160.98px] md:h-[247px] md:w-[247px]"
+          imageClassName="relative h-[25rem] w-[25rem] object-cover"
           altSrcTuples={[
             ['Potn pfp', '/assets/landing/potn.png'],
             ['Bd pfp', '/assets/landing/birddog.png'],
@@ -39,7 +39,7 @@ export default async function Page() {
         </Section>
         <Section
           title="WEN GAMES?"
-          imageClassName="relative h-[199px] w-[199px] md:h-[323px] md:w-[323px]"
+          imageClassName="relative h-[25rem] w-[25rem] object-cover"
           altSrcTuples={[['wen pfp', '/assets/wen.gif']]}
           isReverse={true}
         >
@@ -55,7 +55,7 @@ export default async function Page() {
         </Section>
         <Section
           title="TYPICAL FRIENDS"
-          imageClassName="relative h-[199px] w-[199px] object-cover md:h-[323px] md:w-[323px]"
+          imageClassName="relative h-[25rem] w-[25rem] object-cover"
           altSrcTuples={[['Tf pfp', '/assets/landing/tf.png']]}
           isReverse={false}
         >
