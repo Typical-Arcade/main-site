@@ -42,7 +42,7 @@ export default async function Page() {
               <SectionParagraph>
                 Typical Arcade was started by{' '}
                 <Link href="https://twitter.com/powerofthenut">
-                  <span className="underline">@poweofthenut</span>
+                  <span className="underline">@powerofthenut</span>
                 </Link>{' '}
                 and{' '}
                 <Link href="https://twitter.com/birddog9000">
