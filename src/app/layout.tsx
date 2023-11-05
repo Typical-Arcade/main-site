@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-unresolved
 import { Analytics } from '@vercel/analytics/react';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Archivo_Black, Archivo } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 
@@ -12,12 +12,13 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: 'black-translucent',
   },
-  viewport: {
-    initialScale: 1,
-    userScalable: false,
-    width: 'device-width',
-    maximumScale: 1,
-  },
+};
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  userScalable: false,
+  width: 'device-width',
+  maximumScale: 1,
 };
 
 const archivoBlack = Archivo_Black({

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { JSX } from 'react';
 
-import garbageDrop from '../../public/assets/gamescreeen/garbageDrop.svg';
-import garbageDropTitle from '../../public/assets/gamescreeen/garbageDropTitle.svg';
-import instructions from '../../public/assets/gamescreeen/instructions.svg';
+import comingSoon from '../../../public/img/gamescreeen/coming-soon.png';
+import garbageDrop from '../../../public/img/gamescreeen/gdrop.png';
+import instructions from '../../../public/img/gamescreeen/instructions.png';
 import { ClassnameProps } from '../types';
 
 type Props = {
@@ -19,14 +19,10 @@ export default function GameScreen({
       <Image alt="mainScreen" src={instructions} />
     </>,
     <>
-      <div className="flex h-full w-full flex-col items-center justify-center">
-        <div className="z-10 flex w-[30rem] flex-col items-center justify-center">
-          <Image alt="garbageDrop" src={garbageDropTitle} />
-        </div>
-        <div className="z-0 absolute">
-          <Image alt="garbageDrop" src={garbageDrop} />
-        </div>
-      </div>
+      <Image alt="garbageDrop" src={garbageDrop} />
+    </>,
+    <>
+      <Image alt="garbageDrop" src={comingSoon} />
     </>,
   ];
 

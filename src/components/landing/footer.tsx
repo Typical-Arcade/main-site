@@ -2,12 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { JSX } from 'react';
 
-import xLogo from '../../public/assets/landing/x-logo.svg';
-import logo from '../../public/assets/logo.png';
+import xLogo from '../../../public/img/landing/x-logo.png';
+import logo from '../../../public/img/logo.png';
 
 export default function Footer(): JSX.Element {
   return (
-    <footer className="w-full h-[8rem] bg-[#111314]">
+    <footer className="h-[8rem] w-full bg-[#111314]">
       <div className="flex h-full flex-row items-center justify-evenly">
         <div className="flex flex-col items-center self-end">
           <Image

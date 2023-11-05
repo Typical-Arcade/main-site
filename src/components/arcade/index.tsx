@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { JSX, useEffect, useState } from 'react';
 
-import arcade from '../../public/assets/arcade.svg';
+import arcade from '../../../public/img/arcade.png';
 // import { ConnectButton } from './connectButton';
 import Logo from '../logo';
 import { JoystickPosition } from '../types';
@@ -12,7 +12,7 @@ import GameScreen from './gameScreen';
 import Joystick from './joystick';
 import TopButton from './topButton';
 
-const NUMBER_GAME_SCREENS = 1;
+const NUMBER_GAME_SCREENS = 2;
 
 export default function Arcade(): JSX.Element {
   const [state, setState] = useState<JoystickPosition>('idle');
@@ -44,7 +44,7 @@ export default function Arcade(): JSX.Element {
   return (
     <div className="flex h-full w-screen flex-col items-center">
       <Image
-        className="absolute h-[92rem] w-full"
+        className="absolute h-[92rem] w-[60rem]"
         src={arcade}
         alt="arcade-base"
       />

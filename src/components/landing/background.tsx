@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { JSX } from 'react';
 
-import building from '../../public/assets/building.svg';
-import cloud from '../../public/assets/cloud.svg';
+import building from '../../../public/img/buildings.png';
+import cloud from '../../../public/img/cloud.png';
 import { ClassnameProps } from '../types';
 
 const clouds = (length: number) =>
@@ -23,11 +23,11 @@ export default function Background({ className }: ClassnameProps): JSX.Element {
           <div className="relative -top-[2rem] grid grid-cols-8 md:gap-x-[15rem]">
             {clouds(8)}
           </div>
-          <div className="relative grid grid-cols-6 md:left-[12rem] left-[6rem] top-[5rem]">
+          <div className="relative left-[6rem] top-[5rem] grid grid-cols-6 md:left-[12rem]">
             {clouds(6)}
           </div>
         </div>
-        <div className="w-full h-full">
+        <div className="h-full w-full">
           <Image className="h-full w-full" src={building} alt="building" />
         </div>
       </div>

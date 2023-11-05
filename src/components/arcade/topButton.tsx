@@ -36,7 +36,10 @@ export default function TopButton({
       className={className}
       onClick={() => {
         setState('click');
-        if (gameScreen >= 1) router.push(`${games[gameScreen - 1]}`);
+        const game = games[gameScreen - 1];
+        if (game && gameScreen >= 1) {
+          router.push(`${games[gameScreen - 1]}`);
+        }
       }}
       onMouseOver={() => setState('hover')}
       onMouseOut={() => setState('idle')}
