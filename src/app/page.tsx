@@ -34,8 +34,8 @@ export default async function Page() {
               title="WHO DONE IT?"
               imageClassName="relative h-[25rem] w-[25rem] object-cover"
               altSrcTuples={[
-                ['Potn pfp', '/assets/landing/potn.png'],
-                ['Bd pfp', '/assets/landing/birddog.png'],
+                ['Potn pfp', '/img/landing/potn.png'],
+                ['Bd pfp', '/img/landing/birddog.png'],
               ]}
               isReverse={false}
             >
@@ -56,7 +56,7 @@ export default async function Page() {
             <Section
               title="WEN GAMES?"
               imageClassName="relative h-[25rem] w-[25rem] object-cover"
-              altSrcTuples={[['wen pfp', '/assets/wen.gif']]}
+              altSrcTuples={[['wen pfp', '/img/wen.gif']]}
               isReverse={true}
             >
               <SectionParagraph>
@@ -72,7 +72,7 @@ export default async function Page() {
             <Section
               title="TYPICAL FRIENDS"
               imageClassName="relative h-[25rem] w-[25rem] object-cover"
-              altSrcTuples={[['Tf pfp', '/assets/landing/tf.png']]}
+              altSrcTuples={[['Tf pfp', '/img/landing/tf.png']]}
               isReverse={false}
             >
               <SectionParagraph>
