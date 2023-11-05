@@ -21,8 +21,8 @@ export default async function Page() {
         data-x_margin="18"
         data-y_margin="18"
       ></script>
-      <Background className="absolute w-full md:h-1/2 lg:h-3/4" />
-      <div className="bg-gradient-to-b from-[#353535] from-0% via-[#252627] via-50% to-[#090c0f] to-100%">
+      <div className="bg-gradient-to-b from-[#353535] from-0% to-[#212325] to-20%">
+        <Background className="absolute w-full" />
         <div className="mb-[10rem] flex w-full flex-col items-center">
           <div className="mt-[5rem] h-[100rem] w-full">
             <Arcade />
