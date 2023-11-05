@@ -23,11 +23,11 @@ export default async function Page() {
       ></script>
       <div className="h-full w-full">
         <div className="absolute h-full w-full bg-gradient-to-b from-[#181C1D00] from-30% via-[#252627] via-80% to-[#252627] to-100% sm:h-[120rem]" />
-        <Background className="absolute md:h-1/2 lg:h-3/4" />
+        <Background className="absolute w-full md:h-1/2 lg:h-3/4" />
         <div className="absolute h-full w-full bg-gradient-to-b from-[#181C1D00] from-30% via-[#252627] via-80% to-[#252627] to-100% sm:h-[120rem]" />
         <div className="bg-gradient-to-b from-[#353535] to-[#090c0f]">
-          <div className="mb-[10rem] flex w-screen flex-col items-center">
-            <div className="mt-[5rem] h-[120rem] lg:h-[110rem]">
+          <div className="mb-[10rem] flex w-full flex-col items-center">
+            <div className="mt-[5rem] h-[120rem] w-full lg:h-[110rem]">
               <Arcade />
             </div>
             <Section

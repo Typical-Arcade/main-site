@@ -42,9 +42,9 @@ export default function Arcade(): JSX.Element {
   }, [state]);
 
   return (
-    <div className="flex h-full w-screen flex-col items-center">
+    <div className="flex h-full w-full flex-col items-center">
       <Image
-        className="absolute h-[92rem] w-[60rem]"
+        className="absolute h-[92rem] w-[65rem]"
         src={arcade}
         alt="arcade-base"
       />
@@ -56,7 +56,7 @@ export default function Arcade(): JSX.Element {
           gameScreen={gameScreen}
         />
       </div>
-      <div className="flex h-fit w-[80rem] flex-row items-center justify-around">
+      <div className="flex h-fit w-[65rem] flex-row items-center justify-around">
         <Joystick
           className="relative bottom-10"
           state={state}
