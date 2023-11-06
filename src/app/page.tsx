@@ -6,21 +6,9 @@ import Footer from '../components/landing/footer';
 import Section from '../components/landing/section';
 import SectionParagraph from '../components/landing/sectionParagraph';
 
-export default async function Page() {
+export default function HomePage() {
   return (
     <>
-      <script
-        data-name="BMC-Widget"
-        data-cfasync="false"
-        src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-        data-id="typicalarcade"
-        data-description="Support me on Buy me a coffee!"
-        data-message="Help keep the games running. Buy me a coffee!"
-        data-color="#40DCA5"
-        data-position="right"
-        data-x_margin="18"
-        data-y_margin="18"
-      ></script>
       <div className="bg-gradient-to-b from-[#353535] from-0% to-[#212325] to-20%">
         <Background className="absolute w-full" />
         <div className="mb-[10rem] flex w-full flex-col items-center">

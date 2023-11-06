@@ -10,13 +10,13 @@ export default function Background({ className }: ClassnameProps): JSX.Element {
     <div className={className}>
       <div className="pt-[3rem]">
         <div className="absolute">
-          <Image src={clouds} alt="clouds" />
+          <Image src={clouds} alt="clouds" priority={true} />
         </div>
         <div className="absolute top-[20rem]">
-          <Image src={background} alt="background" />
+          <Image src={background} alt="background" priority={true}/>
         </div>
         <div className="absolute top-[20rem]">
-          <Image src={clouds} alt="clouds" />
+          <Image src={clouds} alt="clouds" priority={true}/>
         </div>
       </div>
     </div>
