@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Typical Arcade',
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'black-translucent',
+    statusBarStyle: 'default',
   },
 };
 
