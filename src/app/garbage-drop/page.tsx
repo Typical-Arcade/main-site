@@ -7,7 +7,7 @@ export default function GarbageDrop() {
       <div className="relative w-full basis-[96%]">
         <iframe
           className="relative h-full w-full"
-          src="/garbage-drop/index.html"
+          src="/garbageDrop/index.html"
         />
       </div>
     </div>
