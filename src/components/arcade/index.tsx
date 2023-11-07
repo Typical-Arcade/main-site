@@ -5,7 +5,6 @@ import { JSX, useEffect, useState } from 'react';
 
 import arcade from '../../../public/img/arcade.png';
 // import { ConnectButton } from './connectButton';
-import BuyMeCoffee from '../buyMeCoffee';
 import Logo from '../logo';
 import { JoystickPosition } from '../types';
 
@@ -68,9 +67,6 @@ export default function Arcade(): JSX.Element {
           text="A"
           gameScreen={gameScreen}
         />
-      </div>
-      <div className="relative flex h-[19rem] w-[57rem] flex-row items-end justify-end">
-        <BuyMeCoffee />
       </div>
     </div>
   );

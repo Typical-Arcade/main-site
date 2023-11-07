@@ -1,21 +1,38 @@
 'use client';
 
-import { JSX } from 'react';
+import { JSX, useEffect, useState } from 'react';
 
 export default function BuyMeCoffee(): JSX.Element {
+  const [width, setWidth] = useState('w-[55rem]');
+  useEffect(() => {
+    const describeBubble = document.getElementById('describe-bubble');
+    const timeout = setTimeout(() => {
+      if (describeBubble) {
+        describeBubble.classList.add('hidden');
+        setWidth('w-fit');
+      }
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  });
+
   return (
-    <a
-      className="h-fit w-fit"
-      href="https://www.buymeacoffee.com/typicalarcade"
+    <div
+      className={`flex h-[15rem] ${width} flex-row items-center justify-between`}
     >
-      <button className="h-fit w-fit rounded-[1rem] bg-[#FF5F5F] hover:bg-[#e66f5a] px-[1.5rem] py-[1rem] font-archivo-black">
-        <div className="flex h-fit w-fit items-center">
-          <span className='text-[1.5rem]'>🎮</span>
-          <span className="font-archivo-black text-white text-[1.3rem]">
-            Help keep the games running
-          </span>
-        </div>
-      </button>
-    </a>
+      <div
+        id="describe-bubble"
+        className="bubble right flex h-[10rem] w-[40rem] flex-col items-center justify-center self-start bg-white font-archivo-black text-[2rem]"
+      >
+        Help keep the games running
+      </div>
+      <a href="https://www.buymeacoffee.com/typicalarcade">
+        <button className="h-[10rem] w-[10rem] rounded-[10rem] bg-[#FF5F5F] px-[1.5rem] py-[1rem] font-archivo-black hover:bg-[#e66f5a]">
+          <div className="flex h-full w-full items-center justify-center text-[5rem]">
+            🎮
+          </div>
+        </button>
+      </a>
+    </div>
   );
 }

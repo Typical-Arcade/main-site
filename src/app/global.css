@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   .hidden-scrollbar::-webkit-scrollbar {
     display: none;
@@ -11,6 +10,55 @@
   .debug {
     border: 1px red solid;
     z-index: 10;
+  }
+
+  .bubble {
+    box-shadow: 0 -0.6rem #fff,
+      0 -1rem #000,
+      0.6rem 0 #fff,
+      0.6rem -0.6rem #000,
+      1rem 0 #000,
+      0 0.6rem #fff,
+      0 1rem #000,
+      -0.6rem 0 #fff,
+      -0.6rem 0.6rem #000,
+      -1rem 0 #000,
+      -0.6rem -0.6rem #000,
+      0.6rem 0.6rem #000;
+  }
+
+  .bubble::after {
+    content: '';
+		display: block;
+		position: absolute;
+		box-sizing: border-box;	
+  }
+
+  .bubble.right::after {
+    height: 0.4rem;
+    width: 0.4rem;
+    top: 8rem;
+    right: 12rem;
+    box-shadow: -2rem -0.4rem #fff,
+      -2rem -0.4rem #fff,
+      -1.6rem 0rem #fff,
+      -2rem 0rem #fff,
+      -2rem 0.4rem #fff,
+      -1.6rem 0.4rem #fff,
+      -1.2rem 0.4rem #fff,
+      -2rem 0.8rem #fff,
+      -1.6rem 0.8rem #fff,
+      -1.2rem 0.8rem #fff,
+      -0.8rem 0.8rem #fff,
+      -1.6rem -0.4rem #000,
+      -1.2rem 0rem #000,
+      -0.8rem 0.4rem #000,
+      -0.4rem 0.8rem #000,
+      0rem 1.2rem #000,
+      -0.4rem 1.2rem #000,
+      -0.8rem 1.2rem #000,
+      -1.2rem 1.2rem #000,
+      -1.6rem 1.2rem #000;
   }
 
   html {
