@@ -41,7 +41,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       lang="en"
       className={`${archivoBlack.variable} ${archivo.variable} overscroll-y-contain overscroll-x-none`}
     >
-      <body className="hidden-scrollbar">
+      <body className="hidden-scrollbar iphone">
         {children}
         <Analytics />
       </body>

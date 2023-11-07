@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  .iphone {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+
   .hidden-scrollbar::-webkit-scrollbar {
     display: none;
   }
