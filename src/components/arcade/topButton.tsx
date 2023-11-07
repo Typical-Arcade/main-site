@@ -38,7 +38,7 @@ export default function TopButton({
         setState('click');
         const game = games[gameScreen - 1];
         if (game && gameScreen >= 1) {
-          router.push(`${games[gameScreen - 1]}`);
+          router.replace(`${games[gameScreen - 1]}`);
         }
       }}
       onMouseOver={() => setState('hover')}

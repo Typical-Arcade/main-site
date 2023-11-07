@@ -8,8 +8,8 @@ export default function BuyMeCoffee(): JSX.Element {
     const describeBubble = document.getElementById('describe-bubble');
     const timeout = setTimeout(() => {
       if (describeBubble) {
-        describeBubble.classList.add('hidden');
         setWidth('w-fit');
+        describeBubble.classList.add('hidden');
       }
     }, 1000);
 
