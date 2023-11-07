@@ -19,6 +19,7 @@ export const viewport: Viewport = {
   userScalable: false,
   width: 'device-width',
   maximumScale: 1,
+  viewportFit: 'cover',
 };
 
 const archivoBlack = Archivo_Black({
