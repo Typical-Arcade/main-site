@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { JSX, useEffect, useState } from 'react';
 
 import { ClassnameProps } from '../types';
@@ -19,6 +20,7 @@ export default function TopButton({
   className,
 }: Props): JSX.Element {
   const [state, setState] = useState<Action>('idle');
+  const router = useRouter();
   useEffect(() => {
     if (state === 'click') {
       const timeout = setTimeout(() => {
@@ -36,7 +38,7 @@ export default function TopButton({
         setState('click');
         const game = games[gameScreen - 1];
         if (game && gameScreen >= 1) {
-          window.location.href = games[gameScreen - 1];
+          router.push(`${games[gameScreen - 1]}`);
         }
       }}
       onMouseOver={() => setState('hover')}

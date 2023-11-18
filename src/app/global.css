@@ -65,6 +65,10 @@
       -1.6rem 1.2rem #000;
   }
 
+  #app h1 {
+    font-family: var(--archivo-black)!important;
+  }
+
   html {
     font-size: 62.5%;
 

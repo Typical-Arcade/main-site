@@ -2,6 +2,8 @@
 
 import { JSX, useEffect, useState } from 'react';
 
+const MODEL_TIMEOUT = 3000;
+
 export default function BuyMeCoffee(): JSX.Element {
   const [width, setWidth] = useState('w-[55rem]');
   useEffect(() => {
@@ -11,7 +13,7 @@ export default function BuyMeCoffee(): JSX.Element {
         setWidth('w-fit');
         describeBubble.classList.add('hidden');
       }
-    }, 1000);
+    }, MODEL_TIMEOUT);
 
     return () => clearTimeout(timeout);
   });

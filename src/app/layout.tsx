@@ -1,8 +1,9 @@
 // eslint-disable-next-line import/no-unresolved
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata, Viewport } from 'next';
-import { Archivo_Black, Archivo } from 'next/font/google';
 import { PropsWithChildren } from 'react';
+
+import { archivoBlack, archivo, heebo } from './fonts';
 
 import './global.css';
 
@@ -22,25 +23,11 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
-const archivoBlack = Archivo_Black({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-archivo-black',
-});
-
-const archivo = Archivo({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-archivo-regular',
-});
-
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html
       lang="en"
-      className={`${archivoBlack.variable} ${archivo.variable} overscroll-y-contain overscroll-x-none`}
+      className={`${archivoBlack.variable} ${archivo.variable} ${heebo.className} overscroll-y-contain overscroll-x-none`}
     >
       <body className="hidden-scrollbar iphone">
         {children}
