@@ -1,0 +1,27 @@
+{
+  "theme_color": "#444149",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "192x192",
+      "src": "/manifest-icon-192.maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "/manifest-icon-512.maskable.png",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "en-US",
+  "name": "Typical Arcade",
+  "short_name": "typicalarcade",
+  "start_url": "/",
+  "scope": "/",
+  "description": "Your home for all things mini games"
+}

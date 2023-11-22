@@ -131,3 +131,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+*.DS_Store
+
+public/sw*.js
+public/sw*.map
+public/workbox-*.js
+public/workbox-*.map

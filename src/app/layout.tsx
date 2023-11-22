@@ -9,9 +9,14 @@ import './global.css';
 
 export const metadata: Metadata = {
   title: 'Typical Arcade',
+  icons: {
+    apple: '/apple-icon-180.png'
+  },
+  manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'default',
+    statusBarStyle: 'black',
+    title: 'Typical Arcade'
   },
 };
 
