@@ -9,7 +9,7 @@ import SectionParagraph from '../components/landing/sectionParagraph';
 
 export default function HomePage() {
   return (
-    <div className="bg-gradient-to-b from-[#353535] from-0% to-[#212325] to-20%">
+    <div className="bg-gradient-to-b from-[#353535] from-0% to-[#212325] to-20% iphone bg-cover bg-no-repeat bg-center bg-fixed">
       <Background className="absolute w-full" />
       <div className="mb-[10rem] flex w-full flex-col items-center">
         <div className="mt-[5rem] h-[100rem] w-full">
