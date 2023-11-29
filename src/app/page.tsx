@@ -9,7 +9,7 @@ import SectionParagraph from '../components/landing/sectionParagraph';
 
 export default function HomePage() {
   return (
-    <div className="bg-gradient-to-b from-[#353535] from-0% to-[#212325] to-20% iphone bg-cover bg-no-repeat bg-center bg-fixed">
+    <div className="iphone bg-gradient-to-b from-[#353535] from-0% to-[#212325] to-20% bg-cover bg-fixed bg-center bg-no-repeat">
       <Background className="absolute w-full" />
       <div className="mb-[10rem] flex w-full flex-col items-center">
         <div className="mt-[5rem] h-[100rem] w-full">
@@ -33,9 +33,9 @@ export default function HomePage() {
             <Link href="https://twitter.com/birddog9000">
               <span className="underline">@birddog9000</span>
             </Link>{' '}
-            out of the idea of creating games for the Typical Friends
-            ecosystem. We love the community and want to be typical community
-            members who contribute and take part in its growth.
+            out of the idea of creating games for the Typical Friends ecosystem.
+            We love the community and want to be typical community members who
+            contribute and take part in its growth.
           </SectionParagraph>
         </Section>
         <Section
@@ -65,14 +65,13 @@ export default function HomePage() {
               <span className="underline">@_typicalfriends</span>
             </Link>{' '}
             is a-typical web3 studio creating top-tier generative art &amp;
-            digital collectibles. Founded by @motionmarkus, we take
-            inspiration from his collections to bring you your daily dose of
-            mini-games.
+            digital collectibles. Founded by @motionmarkus, we take inspiration
+            from his collections to bring you your daily dose of mini-games.
           </SectionParagraph>
         </Section>
       </div>
-      <Footer />
-      <div className='z-50 fixed bottom-[10rem] right-[3rem]'>
+      <Footer className="relative top-[7rem] h-[calc(3rem+env(safe-area-inset-bottom))]" />
+      <div className="fixed bottom-[10rem] right-[3rem] z-50">
         <BuyMeCoffee />
       </div>
     </div>
