@@ -66,6 +66,24 @@
       -1.6rem 1.2rem #000;
   }
 
+  .triangle-button {
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .triangle-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 0 3rem 5rem 3rem;
+    rotate: 90deg;
+    border-style: solid;
+    border-color: transparent transparent #121516 transparent;
+  }
+
   html {
     font-size: 62.5%;
 

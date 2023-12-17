@@ -8,8 +8,8 @@ import arcade from '../../../public/img/arcade.png';
 import Logo from '../logo';
 import { JoystickPosition } from '../types';
 
+import Arrows from './Arrows';
 import GameScreen from './GameScreen';
-import Joystick from './Joystick';
 import TopButton from './TopButton';
 
 const NUMBER_GAME_SCREENS = 2;
@@ -57,13 +57,17 @@ export default function Arcade(): JSX.Element {
         />
       </div>
       <div className="flex h-fit w-[65rem] flex-row items-center justify-around">
-        <Joystick
+        {/* <Joystick
           className="relative bottom-10"
           state={state}
           setState={setState}
+        /> */}
+        <Arrows
+          className="relative h-[3.8rem] basis-1/2"
+          setState={setState}
         />
         <TopButton
-          className="relative bottom-7 self-end"
+          className="relative basis-1/2 translate-y-[0.5rem] flex flex-row justify-center"
           text="A"
           gameScreen={gameScreen}
         />
