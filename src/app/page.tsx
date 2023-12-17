@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
 import Arcade from '../components/arcade';
-import BuyMeCoffee from '../components/buyMeCoffee';
-import Background from '../components/landing/background';
-import Footer from '../components/landing/footer';
-import Section from '../components/landing/section';
-import SectionParagraph from '../components/landing/sectionParagraph';
+import BuyMeCoffee from '../components/BuyMeCoffee';
+import Background from '../components/landing/Background';
+import Footer from '../components/landing/Footer';
+import Section from '../components/landing/Section';
+import SectionParagraph from '../components/landing/SectionParagraph';
 
 export default function HomePage() {
   return (
@@ -70,7 +70,7 @@ export default function HomePage() {
           </SectionParagraph>
         </Section>
       </div>
-      <Footer className="relative top-[7rem] h-[calc(3rem+env(safe-area-inset-bottom))]" />
+      <Footer className="relative top-[7rem] h-[calc(10rem+env(safe-area-inset-bottom))]" />
       <div className="fixed bottom-[10rem] right-[3rem] z-50">
         <BuyMeCoffee />
       </div>

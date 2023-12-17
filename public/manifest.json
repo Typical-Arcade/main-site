@@ -1,6 +1,13 @@
 {
   "theme_color": "#212325",
   "background_color": "#353535",
+  "shortcuts": [
+    {
+      "name": "garbage drop",
+      "description": "Start playing garbage drop",
+      "url": "/garbage-drop"
+    }
+  ],
   "screenshots": [
     {
       "src": "/screenshot_one.png",
@@ -54,7 +61,6 @@
       "type": "image/png"
     },
     {
-      "purpose": "any",
       "sizes": "1024x1024",
       "src": "/icon_1024.png",
       "type": "image/png"

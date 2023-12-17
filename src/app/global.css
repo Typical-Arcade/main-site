@@ -34,9 +34,9 @@
 
   .bubble::after {
     content: '';
-		display: block;
-		position: absolute;
-		box-sizing: border-box;	
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
   }
 
   .bubble.right::after {

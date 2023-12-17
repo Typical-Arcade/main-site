@@ -8,9 +8,9 @@ import arcade from '../../../public/img/arcade.png';
 import Logo from '../logo';
 import { JoystickPosition } from '../types';
 
-import GameScreen from './gameScreen';
-import Joystick from './joystick';
-import TopButton from './topButton';
+import GameScreen from './GameScreen';
+import Joystick from './Joystick';
+import TopButton from './TopButton';
 
 const NUMBER_GAME_SCREENS = 2;
 

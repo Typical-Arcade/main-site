@@ -1,5 +1,4 @@
 // eslint-disable-next-line import/no-unresolved
-import { Analytics } from '@vercel/analytics/react';
 import type { Metadata, Viewport } from 'next';
 import { PropsWithChildren } from 'react';
 
@@ -94,11 +93,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html
       lang="en"
-      className={`${archivoBlack.variable} ${archivo.variable} ${heebo.className} overscroll-y-contain overscroll-x-none`}
+      className={`${archivoBlack.variable} ${archivo.variable} ${heebo.className}`}
     >
-      <body className="hidden-scrollbar">
+      <body className="hidden-scrollbar overscroll-y-contain overscroll-x-none">
         {children}
-        <Analytics />
       </body>
     </html>
   );

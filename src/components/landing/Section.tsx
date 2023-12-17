@@ -1,6 +1,6 @@
 import { PropsWithChildren, JSX } from 'react';
 
-import SectionImages from './sectionImages';
+import SectionImages from './SectionImages';
 
 type Props = {
   imageClassName: string;
