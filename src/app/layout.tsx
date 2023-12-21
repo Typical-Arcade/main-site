@@ -1,4 +1,6 @@
-// eslint-disable-next-line import/no-unresolved
+/* eslint-disable import/no-unresolved */
+
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import { PropsWithChildren } from 'react';
@@ -113,6 +115,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     >
       <body className="hidden-scrollbar overscroll-y-contain overscroll-x-none">
         <SpeedInsights />
+        <Analytics />
         {children}
       </body>
     </html>
