@@ -1,45 +1,41 @@
 'use client';
 
 import Image from 'next/image';
-import { JSX, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { JSX, useState } from 'react';
 
 import arcade from '../../../public/img/arcade.png';
-// import { ConnectButton } from './connectButton';
 import Logo from '../logo';
-import { JoystickPosition } from '../types';
 
-import Arrows from './Arrows';
+import Arrow from './Arrow';
+import { games } from './games';
 import GameScreen from './GameScreen';
 import TopButton from './TopButton';
 
 const NUMBER_GAME_SCREENS = 2;
 
 export default function Arcade(): JSX.Element {
-  const [state, setState] = useState<JoystickPosition>('idle');
+  const router = useRouter();
   const [gameScreen, setGameScreen] = useState<number>(0);
 
-  useEffect(() => {
-    if (state === 'right') {
-      if (gameScreen === NUMBER_GAME_SCREENS) {
-        setGameScreen(gameScreen);
-      } else {
-        setGameScreen(gameScreen + 1);
-      }
+  const rightClick = function() {
+    if (gameScreen === NUMBER_GAME_SCREENS) {
+      setGameScreen(gameScreen);
+    } else {
+      setGameScreen(gameScreen + 1);
     }
-    if (state === 'left') {
-      if (gameScreen >= 1) {
-        setGameScreen(gameScreen - 1);
-      }
+  };
+  const leftClick = function() {
+    if (gameScreen >= 1) {
+      setGameScreen(gameScreen - 1);
     }
-
-    if (state !== 'idle') {
-      const timeout = setTimeout(() => {
-        setState('idle');
-      }, 100);
-
-      return () => clearTimeout(timeout);
+  };
+  const selectClick = function() {
+    const game = games[gameScreen - 1];
+    if (game && gameScreen >= 1) {
+      router.push(games[gameScreen - 1]);
     }
-  }, [state]);
+  };
 
   return (
     <div className="flex h-full w-full flex-col items-center">
@@ -56,21 +52,30 @@ export default function Arcade(): JSX.Element {
           gameScreen={gameScreen}
         />
       </div>
-      <div className="flex h-fit w-[65rem] flex-row items-center justify-around">
-        {/* <Joystick
-          className="relative bottom-10"
-          state={state}
-          setState={setState}
-        /> */}
-        <Arrows
-          className="relative h-[3.8rem] basis-1/2"
-          setState={setState}
-        />
+      <div className="flex h-fit w-[65rem] translate-y-3 flex-row items-center justify-around">
+        <div className="flex basis-1/2 flex-row justify-center gap-[2rem]">
+          <TopButton
+            className="relative flex -scale-x-100 flex-row justify-center"
+            onClick={leftClick}
+            gameScreen={gameScreen}
+          >
+            <Arrow />
+          </TopButton>
+          <TopButton
+            className="relative flex flex-row justify-center"
+            onClick={rightClick}
+            gameScreen={gameScreen}
+          >
+            <Arrow />
+          </TopButton>
+        </div>
         <TopButton
-          className="relative basis-1/2 translate-y-[0.5rem] flex flex-row justify-center"
-          text="A"
+          className="relative flex basis-1/2 flex-row justify-center"
           gameScreen={gameScreen}
-        />
+          onClick={selectClick}
+        >
+          <>{'A'}</>
+        </TopButton>
       </div>
     </div>
   );

@@ -78,10 +78,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-width: 0 3rem 5rem 3rem;
+    border-width: 0 0.9rem 2rem 0.9rem;
     rotate: 90deg;
     border-style: solid;
-    border-color: transparent transparent #121516 transparent;
+    border-color: transparent transparent #ffffff transparent;
   }
 
   html {

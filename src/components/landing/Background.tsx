@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import { JSX } from 'react';
+import { HTMLAttributes, JSX } from 'react';
 
 import background from '../../../public/img/buildings.png';
 import clouds from '../../../public/img/clouds.png';
-import { ClassnameProps } from '../types';
 
-export default function Background({ className }: ClassnameProps): JSX.Element {
+export default function Background({ className }: HTMLAttributes<HTMLDivElement>): JSX.Element {
   return (
     <div className={className}>
       <div className="pt-[3rem]">

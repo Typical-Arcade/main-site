@@ -1,9 +1,8 @@
-import { JSX } from 'react';
+import { HTMLAttributes, JSX } from 'react';
 
 import AppLogo from '../AppLogo';
-import { ClassnameProps } from '../types';
 
-export default function Logo({ className }: ClassnameProps): JSX.Element {
+export default function Logo({ className }: HTMLAttributes<HTMLDivElement>): JSX.Element {
   return (
     <div className={className}>
       <div className="relative inline-flex items-center justify-center gap-[0.625rem]">

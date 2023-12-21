@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { HTMLAttributes } from 'react';
 
 import logo from '../../public/img/logo.png';
 
-import { ClassnameProps } from './types';
 
-export default function AppLogo({ className }: ClassnameProps) {
+export default function AppLogo({ className }: HTMLAttributes<HTMLDivElement>) {
   return (
     <Link href="/">
       <Image alt="logo" src={logo} className={`${className} object-cover`} />

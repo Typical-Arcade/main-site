@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { JSX } from 'react';
+import { HTMLAttributes, JSX } from 'react';
 
 import xLogo from '../../../public/img/landing/x-logo.png';
 import AppLogo from '../AppLogo';
-import { ClassnameProps } from '../types';
 
-export default function Footer({ className }: ClassnameProps): JSX.Element {
+export default function Footer({ className }: HTMLAttributes<HTMLDivElement>): JSX.Element {
   return (
     <footer className={`${className} w-full bg-[#111314]`}>
       <div className="flex h-full flex-row items-center justify-evenly">

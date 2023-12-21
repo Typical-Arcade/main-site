@@ -1,14 +1,13 @@
 import Image from 'next/image';
-import { JSX } from 'react';
+import { HTMLAttributes, JSX } from 'react';
 
 import comingSoon from '../../../public/img/gamescreeen/coming-soon.png';
 import garbageDrop from '../../../public/img/gamescreeen/gdrop.png';
 import instructions from '../../../public/img/gamescreeen/instructions.png';
-import { ClassnameProps } from '../types';
 
 type Props = {
   gameScreen: number;
-} & ClassnameProps;
+} & HTMLAttributes<HTMLDivElement>;
 
 export default function GameScreen({
   gameScreen,
