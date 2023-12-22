@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         ['archivo-black']: ['var(--font-archivo-black)'],
         ['archivo-regular']: ['var(--font-archivo-regular)']
+      },
+      zIndex: {
+        top: '99999',
       }
     },
   },

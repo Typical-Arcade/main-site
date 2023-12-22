@@ -70,7 +70,7 @@ export default function HomePage() {
           </SectionParagraph>
         </Section>
       </div>
-      <Footer className="relative top-[7rem] h-[calc(10rem+env(safe-area-inset-bottom))]" />
+      <Footer />
       <div className="fixed bottom-[10rem] right-[3rem] z-50">
         <BuyMeCoffee />
       </div>
