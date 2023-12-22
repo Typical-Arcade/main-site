@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --navbar-height: 6rem;
+  --iphone-padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
 @layer base {
   .iphone {
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    padding: var(--iphone-padding);
     min-height: calc(100% + env(safe-area-inset-top));
   }
 
@@ -110,5 +115,16 @@
     @media only screen and (max-width: 350px) {
       font-size: 32%;
     }
+  }
+}
+
+@layer components {
+  .navbar-height {
+    @apply h-[var(--navbar-height)];
+  }
+
+  .iframe-sizing {
+    padding: var(--iphone-padding);
+    @apply top-[var(--navbar-height)] h-[calc(100%-var(--navbar-height))] fixed w-full;
   }
 }
