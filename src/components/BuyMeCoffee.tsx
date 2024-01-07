@@ -1,5 +1,3 @@
-'use client';
-
 import { JSX, useEffect, useState } from 'react';
 
 const MODEL_TIMEOUT = 3000;

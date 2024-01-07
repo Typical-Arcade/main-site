@@ -1,13 +1,50 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 import Arcade from '../components/arcade';
 import BuyMeCoffee from '../components/BuyMeCoffee';
+import InstallAppWarningModal from '../components/InstallAppWarningModal';
 import Background from '../components/landing/Background';
 import Footer from '../components/landing/Footer';
 import Section from '../components/landing/Section';
 import SectionParagraph from '../components/landing/SectionParagraph';
+import { installModalSeenSessionStorage, mobile } from '../components/util';
+
+const modalSeenStateFunction = () => {
+  if (typeof sessionStorage !== 'undefined') {
+    const modalSeen = installModalSeenSessionStorage.get();
+    if (modalSeen && modalSeen === 'yes') {
+      return true;
+    }
+    return false;
+  }
+
+  return false;
+};
 
 export default function HomePage() {
+  const [installModalSeen, setInstallModalSeen] = useState(modalSeenStateFunction);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const isInstallModalSeen = installModalSeenSessionStorage.get();
+    if (window?.matchMedia('(display-mode: standalone)').matches || isInstallModalSeen === 'yes') {
+      setInstallModalSeen(true);
+    } else {
+      setInstallModalSeen(false);
+    }
+
+    if (mobile.is()) {
+      setIsMobile(true);
+    }
+  }, []);
+
+  const closeModal = () => {
+    setInstallModalSeen(true);
+    installModalSeenSessionStorage.set('yes');
+  };
+
   return (
     <div className="iphone bg-gradient-to-b from-[#353535] from-0% to-[#212325] to-20% bg-cover bg-fixed bg-center bg-no-repeat">
       <Background className="absolute w-full" />
@@ -71,9 +108,10 @@ export default function HomePage() {
         </Section>
       </div>
       <Footer />
-      <div className="fixed bottom-[10rem] right-[3rem] z-50">
+      <div className="fixed bottom-[10rem] right-[3rem] z-40">
         <BuyMeCoffee />
       </div>
+      {isMobile && !installModalSeen && <InstallAppWarningModal close={closeModal}/>}
     </div>
   );
 }
