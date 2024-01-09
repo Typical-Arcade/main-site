@@ -46,7 +46,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="iphone bg-gradient-to-b from-[#353535] from-0% to-[#212325] to-20% bg-cover bg-fixed bg-center bg-no-repeat">
+    <div className="mobile bg-gradient-to-b from-[#353535] from-0% to-[#212325] to-20% bg-cover bg-fixed bg-center bg-no-repeat">
       <Background className="absolute w-full" />
       <div className="mb-[10rem] flex w-full flex-col items-center">
         <div className="mt-[5rem] h-[100rem] w-full">
