@@ -23,6 +23,11 @@ export const metadata: Metadata = {
       {
         url: '/splash/TA-launch-2048-2732.png',
         media:
+          '(device-width: 1170px) and (device-height: 2532px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)',
+      },
+      {
+        url: '/splash/TA-launch-2048-2732.png',
+        media:
           '(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)',
       },
       {

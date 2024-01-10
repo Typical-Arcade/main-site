@@ -108,7 +108,7 @@ export default function HomePage() {
         </Section>
       </div>
       <Footer />
-      <div className="fixed bottom-[10rem] right-[3rem] z-40">
+      <div className="fixed bottom-[1rem] right-[3rem] z-40">
         <BuyMeCoffee />
       </div>
       {isMobile && !installModalSeen && <InstallAppWarningModal close={closeModal}/>}

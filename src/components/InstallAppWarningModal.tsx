@@ -32,7 +32,7 @@ export default function InstallAppWarningModal({ close }: Props) {
     }
   }, []);
   return (
-    <div className="fixed left-0 top-0 z-50 flex h-full w-full flex-col items-center justify-end bg-black bg-opacity-[85%] p-[2rem]">
+    <div className="fixed left-0 top-0 z-top flex h-full w-full flex-col items-center justify-end bg-black bg-opacity-[85%] p-[2rem]">
       <div className="relative flex w-full flex-col items-center justify-start rounded-[2rem] bg-white p-[2.5rem]">
         <div className="mb-[1rem] text-center font-archivo-black text-[3rem] font-normal leading-tight">
           {title}
