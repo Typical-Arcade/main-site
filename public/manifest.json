@@ -1,0 +1,74 @@
+{
+  "theme_color": "#212325",
+  "background_color": "#353535",
+  "shortcuts": [
+    {
+      "name": "garbage drop",
+      "description": "Start playing garbage drop",
+      "url": "/garbage-drop"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot_one.png",
+      "sizes": "872x1236",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Arcade Machine"
+    }
+  ],
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "48x48",
+      "src": "/icon_x48.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "72x72",
+      "src": "/icon_x72.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "96x96",
+      "src": "/icon_x96.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "128x128",
+      "src": "/icon_x128.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "192x192",
+      "src": "/icon_x192.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "/icon_x512.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "1024x1024",
+      "src": "/icon_1024.png",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "en-US",
+  "name": "Typical Arcade",
+  "short_name": "Typical Arcade",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "description": "Your home for all things mini games",
+  "categories": ["games"]
+}

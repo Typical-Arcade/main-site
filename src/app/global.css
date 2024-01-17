@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navbar-height: 6rem;
+  --mobile-padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+@layer base {
+  .mobile {
+    padding: var(--mobile-padding);
+    min-height: calc(100% + env(safe-area-inset-top));
+  }
+
+  .hidden-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .debug {
+    border: 1px red solid;
+    z-index: 10;
+  }
+
+  .bubble {
+    box-shadow: 0 -0.6rem #fff,
+      0 -1rem #000,
+      0.6rem 0 #fff,
+      0.6rem -0.6rem #000,
+      1rem 0 #000,
+      0 0.6rem #fff,
+      0 1rem #000,
+      -0.6rem 0 #fff,
+      -0.6rem 0.6rem #000,
+      -1rem 0 #000,
+      -0.6rem -0.6rem #000,
+      0.6rem 0.6rem #000;
+  }
+
+  .bubble::after {
+    content: '';
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  .bubble.right::after {
+    height: 0.4rem;
+    width: 0.4rem;
+    top: 8rem;
+    right: 12rem;
+    box-shadow: -2rem -0.4rem #fff,
+      -2rem -0.4rem #fff,
+      -1.6rem 0rem #fff,
+      -2rem 0rem #fff,
+      -2rem 0.4rem #fff,
+      -1.6rem 0.4rem #fff,
+      -1.2rem 0.4rem #fff,
+      -2rem 0.8rem #fff,
+      -1.6rem 0.8rem #fff,
+      -1.2rem 0.8rem #fff,
+      -0.8rem 0.8rem #fff,
+      -1.6rem -0.4rem #000,
+      -1.2rem 0rem #000,
+      -0.8rem 0.4rem #000,
+      -0.4rem 0.8rem #000,
+      0rem 1.2rem #000,
+      -0.4rem 1.2rem #000,
+      -0.8rem 1.2rem #000,
+      -1.2rem 1.2rem #000,
+      -1.6rem 1.2rem #000;
+  }
+
+  .triangle-button {
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .triangle-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 0 0.9rem 2rem 0.9rem;
+    rotate: 90deg;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+  }
+
+  html {
+    font-size: 62.5%;
+
+    @media only screen and (min-width: 1800px) {
+      font-size: 75%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 56.25%;
+    }
+
+    @media only screen and (max-width: 900px) {
+      font-size: 50%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 37.5%;
+    }
+
+    @media only screen and (max-width: 400px) {
+      font-size: 35%;
+    }
+
+    @media only screen and (max-width: 350px) {
+      font-size: 32%;
+    }
+  }
+}
+
+@layer components {
+  .navbar-height {
+    @apply h-[var(--navbar-height)];
+  }
+
+  .iframe-sizing {
+    padding: var(--mobile-padding);
+    @apply top-[var(--navbar-height)] h-[calc(100%-var(--navbar-height))] fixed w-full lg:w-1/4;
+  }
+}
